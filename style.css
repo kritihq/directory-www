@@ -1,0 +1,212 @@
+:root {
+  --kriti-primary-color: #eee;
+  --kriti-secondary-color: black;
+}
+
+html, body {
+  background-color: #eee;
+  font-weight: 400;
+  font-size: 1rem;
+  font-family: 'DM Sans', 'Helvetica', sans-serif;
+}
+
+button, input, select {
+  border: none;
+  background: none;
+}
+
+button, input[type="file"], input[type="submit"] {
+  font-weight: 400;
+  font-size: 1rem;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+button:hover:not(:disabled) {
+  background-color: #bbb;
+}
+
+button.primary, input[type="submit"] {
+  background-color: #7196ee;
+  color: white;
+}
+
+button.primary:hover, input[type="submit"]:hover {
+  background-color: #5172d5;
+}
+button.primary:disabled, input[type="submit"]:disabled {
+  background-color: #b9bcc4;
+  cursor: not-allowed;
+}
+
+button.svg-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+button.toggle {
+  gap: 8px;
+}
+button.toggle span {
+  display: none;
+}
+
+button.toggle-on {
+  background-color: #bbb;
+}
+
+button.toggle-on span {
+  display: block;
+}
+
+select {
+  margin: 0 0.5rem;
+  padding: 8px 12px;
+  font-weight: 400;
+}
+select:hover {
+  background-color: #bbb;
+  border-radius: 4px;
+}
+
+
+header {
+  min-height: var(--editor-header-height);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+  section:nth-child(1) {
+    padding: 8px 24px;
+    flex: 1 0 80%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  section:nth-child(2) {
+    padding: 8px 24px;
+    flex: 1 0 20%; /* same as right panel */
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+}
+
+dialog {
+  max-width: 100vw;
+  max-height: 80%;
+  min-width: 30vw;
+  width: fit-content;
+  inset: 0px;
+  max-width: 100vw;
+  max-height: 100dvh;
+  margin: auto;  outline: none;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  padding: 0;
+
+  & header {
+    padding: 12px;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 24px;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  & main {
+    padding: 24px;
+    width: 100%;
+  }
+
+  & .select-file-label {
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    width: fit-content;
+    display: block;
+    cursor: pointer;
+    padding: 4px 24px;
+    color: #777;
+    font-size: 1rem;
+
+    &:hover {
+      background-color: #eee;
+    }
+  }
+
+  & .select-file-label input {
+    display: none;
+  }
+
+  & form {
+    display: flex;
+    flex-flow: column;
+    gap: 12px;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    & input[type="submit"], & button {
+      align-self: end;
+    }
+  }
+  
+  & label {
+    padding: 0 12px;
+  }
+
+  & input:not([type="submit"]) {
+    padding: 12px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+  }
+  
+  & .input-box {
+    width: 100%;
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    & label {
+      flex: 0 1 20%;
+    }
+
+    & input {
+      flex: 0 1 50%;
+    }
+  }
+}
+
+.file-dropzone {
+  margin-top: 24px;
+
+  & > section {
+    border: 2px dashed #bbbbbb;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding: 36px;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+.file-dropzone.valid {
+  & > section {
+    border: 2px dashed #00ff00;
+  }
+}
+.file-dropzone.invalid {
+  & > section {
+    border: 2px dashed #ff0000;
+  }
+}
+
