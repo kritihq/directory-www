@@ -66,6 +66,18 @@
           width: 100%;
         }
       }
+
+      .list-style-tick {
+        list-style: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>') inside;
+
+        & li::marker {
+          padding: 12px;
+        }
+      }
+
+      button.primary {
+        background-color: cornflowerblue;
+      }
     </style>
   </head>
   <body>
@@ -81,25 +93,66 @@
       </dialog>
     </nav>
     <main>
-      <section id="hero">
-        <h1>No code directory builder from spreadsheet, no cap</h1>
-        <ul>
-          <li>Manage data from Excel or Google Sheets</li>
-          <li>No code, drag-drop any element, tweak every style</li>
-          <li>Up and running in minutes</li>
-          <li>Add multiple collections per site</li>
+      <section id="hero" style="display: flex; flex-flow: column; align-items: center; text-align: center;">
+        <h1 style="margin-top: 48px;">Publish directories from Excel<br><mark style="padding: 0 12px; border-radius: 8px;">No code, in Minutes</mark></h1>
+        <ul class="list-style-tick" style="display: flex; align-items: center; justify-content: space-around; gap: 24px; padding: 0; margin: 24px 0;">
+          <li>Drag & drop builder</li>
+          <li>Import xlsx file</li>
+          <li>Multiple collections</li>
           <li>Custom domain</li>
         </ul>
-        <button type="button" class="" onclick="document.getElementById('dialog-login').showModal();" style="margin-top: 24px;">Publish now</button>
+        <button type="button" class="primary" onclick="document.getElementById('dialog-login').showModal();" style="margin: 48px 0; width: fit-content; padding: 12px;">Grab 14 day free trial</button>
+        <video controls controlslist="nodownload nofullscreen disablepictureinpicture" style="border: 12px solid #6495ed24; border-radius: 12px; width: 70vw; margin: 24px 0; box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;">
+          <source src="/assets/infinite-scroll-2.mp4" type="video/mp4"/>
+        </video>
       </section>
       <!--<section id="social-proofs">-->
       <!--  <h2>Social Proof</h2>-->
       <!--</section>-->
-      <section id="features">
-        <h2>Features</h2>
-        <article>
-          
-        </article>
+      <section id="features" style="display: flex; flex-flow: column; align-items: center; gap: 24px;">
+        <h2 style="text-align: center;">Features</h2>
+        <p style="text-align: center;">This ain't your regular Wordpress site. We designed <b>decide name already</b> to make it easy to publish directory sites.<br/>All features are built precisely around this ideology.</p>
+        <ul style="list-style: none; padding: 0; margin: 24px 0;">
+          <li><article style="display: flex; flex-flow: row wrap; align-items: stretch; justify-content: space-between;  gap: 24px; margin: 128px 0;">
+            <div style="flex: 1 1 40%;">
+              <h3><span style="color: blue;">Save time &amp; money.</span> Stop fighting CMS work directly in your favourite spreadsheet editor while we handle the servers.</h3>
+              <!--<ul>-->
+              <!--  <li>Import listings from excel/google sheets</li>-->
+              <!--  <li>No server maintenance</li>-->
+              <!--  <li>Secure by default, 0 click auto SSL certificate renewal</li>-->
+              <!--</ul>-->
+            </div>
+            <video width="50%" controls>
+              <source src="/assets/infinite-scroll-2.mp4" type="video/mp4">
+            </video>
+          </article></li>
+          <li><article style="display: flex; flex-flow: row wrap; align-items: stretch; justify-content: space-between;  gap: 24px; margin: 128px 0;">
+            <video width="50%" controls>
+              <source src="/assets/infinite-scroll-2.mp4" type="video/mp4">
+            </video>
+            <div style="flex: 1 1 40%;">
+              <h3><span style="color: blue;">F<i>aaaaaaaaa</i>st</span>. Every request optimised to be served in seconds.</h3>
+              <!--<ul>-->
+              <!--  <li>Optimised for Lighthouse scores</li>-->
+              <!--  <li>Designed to serve in milliseconds</li>-->
+              <!--</ul>-->
+            </div>
+          </article></li>
+          <li><article style="display: flex; flex-flow: row wrap; align-items: stretch; justify-content: space-between;  gap: 24px; margin: 128px 0;">
+            <div style="flex: 1 1 40%;">
+              <h3><span style="color: blue;">Your brand, your style.</span> Don't rely on templates. Design your own page as your brand sees fit.</h3>
+              <!--<ul>-->
+              <!--  <li>Add multiple collections per site</li>-->
+              <!--  <li>Use drag and drop builder to build your site</li>-->
+              <!--  <li>Attach custom domains</li>-->
+              <!--  <li>Change every available style</li>-->
+              <!--</ul>-->
+            </div>
+            <video width="50%" controls>
+              <source src="/assets/infinite-scroll-2.mp4" type="video/mp4">
+            </video>
+          </article></li>
+        </ul>
       </section>
       <!--<section id="testimonials">-->
       <!--  <h2>What our users say</h2>-->
