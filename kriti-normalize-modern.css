@@ -252,6 +252,17 @@ h6 { font-size: 1.2rem; }
 p { font-size: 1rem; }
 small { font-size: 0.833rem; }
 
+@media (width < 1024px) {
+  p { font-size: 16px; }
+  body { font-size: 16px; }
+  small { font-size: 14.22px; }
+  h1 { font-size: 32.44px; }
+  h2 { font-size: 28.83px; }
+  h3 { font-size: 25.63px; }
+  h4 { font-size: 22.78px; }
+  h5 { font-size: 20.25px; }
+  h6 { font-size: 18px; }
+}
 
 a {
   color: inherit;
