@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Directory</title>
+    <title>Kriti Directory | No code directory builder</title>
     <!--<script src="/auth/dist/pb/pocketbase.umd.js"></script>-->
     <!--<script src="/auth/dist/commons/js/script.js"></script>-->
     <link href="/kriti-normalize-modern.css" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Archivo:ital,wght@0,100..900;1,100..900&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Cabin:ital,wght@0,400..700;1,400..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Golos+Text:wght@400..900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karma:wght@300;400;500;600;700&family=Lexend:wght@100..900&family=Lustria&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mooli&family=Oxygen:wght@300;400;700&family=Poppins&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quando&family=Questrial&family=Raleway:ital,wght@0,100..900;1,100..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&family=Unbounded:wght@200..900&family=Urbanist:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Archivo:ital,wght@0,100..900;1,100..900&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Cabin:ital,wght@0,400..700;1,400..700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&family=Golos+Text:wght@400..900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karma:wght@300;400;500;600;700&family=Lexend:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Lustria&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mooli&family=Oxygen:wght@300;400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quando&family=Questrial&family=Raleway:ital,wght@0,100..900;1,100..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&family=Unbounded:wght@200..900&family=Urbanist:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <style>
       body {
         font-family: "Inter", serif;
@@ -46,7 +46,8 @@
         }
       }
       ul {
-        list-style: disc;
+        list-style: disc outside;
+        padding: 0;
       }
       button {
         border: none;
@@ -64,6 +65,16 @@
         
         &:hover {
           background-color: #4a86f0;
+        }
+      }
+      a {
+        &:hover {
+          font-style: italic;
+        }
+      }
+      figure {
+        & img {
+          border-radius: 8px;
         }
       }
       @media (width < 1024px) {
@@ -196,8 +207,8 @@
           margin: 24px 0;
           display: flex;
           flex-flow: row wrap;
-          align-items: stretch;
-          justify-content: space-around;
+          justify-content: space-evenly;
+          align-items: flex-start;
 
           &> li {
             flex: 0 0 30%;
@@ -237,7 +248,7 @@
       }
       @media (width < 768px) {
         #pricing {
-          & ul {
+          &> ul {
             flex-flow: column;
             margin: 12px 0;
             gap: 12px;
@@ -285,14 +296,22 @@
       }
 
       footer {
-        height: 50vh;
-        padding: 24px;
+        min-height: 50vh;
+        padding: 48px 15%;
+
+        & section {
+          margin: 1rem 24px;
+        }
+
+        & ul {
+          list-style: none;
+        }
       }
     </style>
   </head>
   <body>
     <nav>
-      <p><a href="/">Decide a name already</a></p>
+      <p><a href="/">Kriti Directory</a></p>
       <button type="button" onclick="document.getElementById('dialog-login').showModal();">Login</button>
       <dialog id="dialog-login">
         <main>
@@ -321,7 +340,7 @@
       <!--</section>-->
       <section id="benefits">
         <h2 style="text-align: center;">Features</h2>
-        <p style="text-align: center;">This ain't your regular Wordpress site. We designed <b>decide name already</b> to make it easy to publish directory sites.<br/>All features are built precisely around this ideology.</p>
+        <p style="text-align: center;">This ain't your regular Wordpress site. We designed <b>Kriti Directory</b> to make it easy to publish directory sites.<br/>All features are built precisely around this ideology.</p>
         <ul class="benefits">
           <li><article>
             <h3><span style="color: blue;">Save time &amp; money.</span> Stop fighting CMS work directly in your favourite spreadsheet editor while we handle the servers.</h3>
@@ -370,15 +389,9 @@
         </ol>
         <h2></h2>
       </section>
-      <section id="features">
-        <ul>
-          <li></li>
-        </ul>
-      </section>
       <section id="pricing">
         <h2>Transparent pricing</h2>
-        <p>No hidden cost (we hate that sh*t)</p>
-        <p>Billed monthly</p>
+        <p>No hidden cost (we hate that sh*t). Billed monthly.</p>
         <ul>
           <li><article>
             <p>Starter</p>
@@ -406,19 +419,6 @@
               <li>Email support</li>
             </ul>
           </article></li>
-          <li><article>
-            <p>Ultra Pro Max</p>
-            <h3>$39/site</h3>
-            <button type="button">Subscribe</button>
-            <ul>
-              <li>Upto 4 collections</li>
-              <li>Upto 1000 listings/collection</li>
-              <li>Free SSL</li>
-              <li>Custom domains</li>
-              <li>No watermark</li>
-              <li>Email support</li>
-            </ul>
-          </article></li>
         </ul>
       </section>
       <section id="faqs">
@@ -436,14 +436,30 @@
           <p>Yes it is possible to attach your own domain, its your directory afterall.</p>
         </details>
         <details>
-          <summary><h3>Something else bothering you?</h3></summary>
-          <p>Contact us via <a href="mailto:admin@kriti.blog">email</a> or <a href="">X (twitter)</a></p>
+          <summary><h3>Missed a question?</h3></summary>
+          <p>We are not telepathic afterall. Contact us via <a href="mailto:admin@kriti.blog">email</a> or <a href="">X (twitter)</a></p>
         </details>
       </section>
+      <section id="cta-2" style="text-align: center; border: 2px dashed cornflowerblue; border-radius: 12px; padding: 48px;">
+        <h2 style="margin: 0; padding: 0;">Have spreadsheet at ready?</h2>
+        <button type="button" style="margin-top: 24px; padding: 12px; width: fit-content;">Publish it right now</button>
+      </section>
     </main>
-    <footer>
+    <footer style="display: flex; flex-flow: row; justify-content: space-between; align-items: baseline;">
       <section>
-        <p>Decide a name already</p>
+        <h2 style="margin: 0; padding: 0;"><span style="font-family: Lora; font-size: 2.4rem;">Kriti/ </span>Directory</h2>
+        <p>Engineered by Vinay</p>
+      </section>
+      <section>
+        <h3>Product</h3>
+        <p><a href="#pricing">Pricing</a></p>
+        <p><a href="#pricing">Privacy Policy</a></p>
+        <p><a href="#pricing">Terms of Service</a></p>
+      </section>
+      <section>
+        <h3>Contact</h3>
+        <p>Mail: hello@decide.name</p>
+        <p>X: @vinay_gaykar</p>
       </section>
     </footer>
   </body>
