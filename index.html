@@ -20,16 +20,15 @@
         margin: 8px 0;
       }
       nav {
-        width: 70%;
         padding: 12px;
-        margin: 0 auto;
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
         justify-content: space-between;
       }
-      main {
+      main, nav {
         width: 70%;
+        max-width: 960px;
         margin: 0 auto;
       }
 
@@ -193,6 +192,7 @@
         #how {
           & ol {
             flex-flow: column;
+            gap: 48px;
           }
         }
       }
@@ -215,7 +215,7 @@
             border: 1px dashed #bbb;
             border-radius: 8px;
 
-            &:nth-child(2) {
+            &:nth-child(1) {
               border: 2px solid cornflowerblue;
               background-color: #6495ed0d;
             }
@@ -252,6 +252,7 @@
             flex-flow: column;
             margin: 12px 0;
             gap: 12px;
+            align-items: center;
 
             & li article ul {
               margin: 0;
@@ -291,6 +292,35 @@
         #faqs {
         }
       }
+
+      #cta-2 {
+        text-align: center;
+        border: 2px dashed cornflowerblue;
+        border-radius: 12px;
+        padding: 48px;
+
+        &> h2 {
+          margin: 0; 
+          padding: 0;
+        }
+
+        &> button {
+          margin-top: 24px; 
+          padding: 12px; 
+          width: fit-content;
+        }
+      }
+      @media (width < 1024px) {
+        #cta-2 {
+        }
+      }
+      @media (width < 768px) {
+        #cta-2 {
+          padding: 12px;
+        }
+      }
+
+
       button.primary {
         background-color: cornflowerblue;
       }
@@ -298,6 +328,10 @@
       footer {
         min-height: 50vh;
         padding: 48px 15%;
+        display: flex; 
+        flex-flow: row wrap; 
+        justify-content: space-between; 
+        align-items: baseline;
 
         & section {
           margin: 1rem 24px;
@@ -307,17 +341,40 @@
           list-style: none;
         }
       }
+      @media (width < 1024px) {
+        footer {
+          min-height: fit-content;
+          gap: 48px;
+          gap: 48px;
+
+          &> section:first-child {
+            order: 3;
+            flex: 1 0 100%;
+          }
+
+          &> section {
+            margin: 0;
+            padding: 0;
+          }
+        }
+      }
+      @media (width < 768px) {
+        footer {
+          padding: 12px;
+          flex-flow: column-reverse;
+        }
+      }
     </style>
   </head>
   <body>
     <nav>
-      <p><a href="/">Kriti Directory</a></p>
-      <button type="button" onclick="document.getElementById('dialog-login').showModal();">Login</button>
+      <p style="margin: 0; padding: 0;"><span style="font-family: Lora;">Kriti/ </span>Directory</p>
+      <!--<button type="button" onclick="document.getElementById('dialog-login').showModal();">Login</button>-->
       <dialog id="dialog-login">
         <main>
           <h2>Login/Signup</h2>
           <p>Get started quickly</p>
-          <button type="button" onclick="login('google')">Continue with Google</button>
+          <!--<button type="button" onclick="login('google')">Continue with Google</button>-->
         </main>
       </dialog>
     </nav>
@@ -330,61 +387,65 @@
           <li>Multiple collections</li>
           <li>Custom domain</li>
         </ul>
-        <button type="button" class="primary" onclick="document.getElementById('dialog-login').showModal();" style="margin: 48px 0; width: fit-content; padding: 12px;">Grab 14 day free trial</button>
+        <p style="margin: 48px 0; padding: 12px;">Coming soon</p>
+        <!--<button type="button" class="primary" onclick="document.getElementById('dialog-login').showModal();" style="margin: 48px 0; width: fit-content; padding: 12px;">Grab 14 day free trial</button>-->
         <video controls controlslist="nodownload disablepictureinpicture" style="border: 12px solid #6495ed24; border-radius: 12px; width: 70vw; margin: 24px 0; box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;">
-          <source src="/assets/infinite-scroll-2.mp4" type="video/mp4"/>
+          <source src="/assets/demo.webm" type="video/webm"/>
         </video>
       </section>
-      <!--<section id="social-proofs">-->
-      <!--  <h2>Social Proof</h2>-->
-      <!--</section>-->
       <section id="benefits">
         <h2 style="text-align: center;">Features</h2>
         <p style="text-align: center;">This ain't your regular Wordpress site. We designed <b>Kriti Directory</b> to make it easy to publish directory sites.<br/>All features are built precisely around this ideology.</p>
         <ul class="benefits">
           <li><article>
-            <h3><span style="color: blue;">Save time &amp; money.</span> Stop fighting CMS work directly in your favourite spreadsheet editor while we handle the servers.</h3>
+            <h3><span style="color: blue;">Save time &amp; money.</span> Stop fighting CMS &amp; work directly in your favourite spreadsheet editor while we handle the servers.</h3>
             <figure>
-              <img src="/assets/import-0.png" alt="Import XLSX" width="100%">
-              <figcaption>Import Spreadsheet</figcaption>
+              <img src="/assets/spreadsheets.webp" alt="Work with any spreadsheet editor" width="100%">
+              <figcaption>Work with any spreadsheet editor</figcaption>
             </figure>
           </article></li>
           <li><article>
             <h3><span style="color: blue;">F<i>aaaaaaaaa</i>st</span>. Every request optimised to be served in seconds.</h3>
             <figure>
-              <img src="/assets/import-0.png" alt="Import XLSX" width="100%">
-              <figcaption>Import Spreadsheet</figcaption>
+              <img src="/assets/performance.png" alt="Performance screenshot" width="100%" style="border: 2px solid grey;">
+              <figcaption>I am speed</figcaption>
             </figure>
           </article></li>
           <li><article>
             <h3><span style="color: blue;">Your brand, your style.</span> Don't rely on templates. Design your own page as your brand sees fit.</h3>
             <figure>
-              <img src="/assets/import-0.png" alt="Import XLSX" width="100%">
-              <figcaption>Import Spreadsheet</figcaption>
+              <img src="/assets/design-with-intention.png" alt="Style every element" width="100%">
+              <figcaption>Style every element</figcaption>
             </figure>
           </article></li>
         </ul>
       </section>
-      <!--<section id="testimonials">-->
-      <!--  <h2>What our users say</h2>-->
-      <!--</section>-->
       <section id="how">
         <h2>How?</h2>
         <ol>
           <li><article>
             <p>Step 1</p>
             <h3>Import</h3>
-            <p>Import your collections and listings. Any columns any data.</p>
+            <figure>
+              <img src="/assets/import.png" alt="Import dialog" width="100%">
+              <figcaption>Import your collections and listings. Any columns any data.</figcaption>
+            </figure>
           </article></li>
           <li><article>
             <p>Step 2</p>
             <h3>Customize</h3>
-            <p>Design your site, from home page to 404 and everything in between.</p>
+            <figure>
+              <img src="/assets/studio-elements-2.png" alt="Design studio" width="100%">
+              <figcaption><p>Design your site, from home page to 404 and everything in between.</p></figcaption>
+            </figure>
           </article></li>
           <li><article>
             <p>Step 3</p>
             <h3>Publish</h3>
-            <p>Publish your work, attach your custom domain and relax.</p>
+            <figure>
+              <img src="/assets/new-directory-2.png" alt="Design studio" width="100%">
+              <figcaption><p>Publish your work, attach your custom domain and relax.</p></figcaption>
+            </figure>
           </article></li>
         </ol>
         <h2></h2>
@@ -393,23 +454,23 @@
         <h2>Transparent pricing</h2>
         <p>No hidden cost (we hate that sh*t). Billed monthly.</p>
         <ul>
-          <li><article>
-            <p>Starter</p>
-            <h3>$19/site</h3>
-            <button type="button">Subscribe</button>
-            <ul>
-              <li>Upto 4 collections</li>
-              <li>Upto 1000 listings/collection</li>
-              <li>Free SSL</li>
-              <li>Custom domains</li>
-              <li>No watermark</li>
-              <li>Email support</li>
-            </ul>
-          </article></li>
+          <!--<li><article>-->
+          <!--  <p>Starter</p>-->
+          <!--  <h3>$19/site</h3>-->
+          <!--  <button type="button">Subscribe</button>-->
+          <!--  <ul>-->
+          <!--    <li>Upto 4 collections</li>-->
+          <!--    <li>Upto 1000 listings/collection</li>-->
+          <!--    <li>Free SSL</li>-->
+          <!--    <li>Custom domains</li>-->
+          <!--    <li>No watermark</li>-->
+          <!--    <li>Email support</li>-->
+          <!--  </ul>-->
+          <!--</article></li>-->
           <li><article>
             <p>Pro</p>
-            <h3>$29/site</h3>
-            <button type="button">Subscribe</button>
+            <h3>$19/site</h3>
+            <!--<button type="button">Subscribe</button>-->
             <ul>
               <li>Upto 4 collections</li>
               <li>Upto 1000 listings/collection</li>
@@ -440,26 +501,26 @@
           <p>We are not telepathic afterall. Contact us via <a href="mailto:admin@kriti.blog">email</a> or <a href="">X (twitter)</a></p>
         </details>
       </section>
-      <section id="cta-2" style="text-align: center; border: 2px dashed cornflowerblue; border-radius: 12px; padding: 48px;">
-        <h2 style="margin: 0; padding: 0;">Have spreadsheet at ready?</h2>
-        <button type="button" style="margin-top: 24px; padding: 12px; width: fit-content;">Publish it right now</button>
-      </section>
+      <!--<section id="cta-2">-->
+      <!--  <h2>Have spreadsheet at ready?</h2>-->
+      <!--  <button type="button">Publish it right now</button>-->
+      <!--</section>-->
     </main>
-    <footer style="display: flex; flex-flow: row; justify-content: space-between; align-items: baseline;">
+    <footer>
       <section>
-        <h2 style="margin: 0; padding: 0;"><span style="font-family: Lora; font-size: 2.4rem;">Kriti/ </span>Directory</h2>
-        <p>Engineered by Vinay</p>
+        <h2 style="margin: 0; padding: 0;"><span style="font-family: Lora;">Kriti/ </span>Directory</h2>
+        <small>Engineered by Vinay</small>
       </section>
-      <section>
+      <section style="display: flex; flex-flow: column; gap: 12px;">
         <h3>Product</h3>
         <p><a href="#pricing">Pricing</a></p>
         <p><a href="#pricing">Privacy Policy</a></p>
         <p><a href="#pricing">Terms of Service</a></p>
       </section>
-      <section>
+      <section style="display: flex; flex-flow: column; gap: 12px;">
         <h3>Contact</h3>
-        <p>Mail: hello@decide.name</p>
-        <p>X: @vinay_gaykar</p>
+        <a href="mailto:vinay.gaykar+kriti_dir@proton.me">Email</a>
+        <a href="https://x.com/vinay_gaykar">X (twitter)</p>
       </section>
     </footer>
   </body>
