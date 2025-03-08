@@ -1,5 +1,139 @@
-<html>
-    <head> </head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Docs | Kriti Directory</title>
+    <link href="/kriti-normalize-modern.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: "Inter", serif;
+      }
+      h1, h2 {
+        font-family: "Bricolage Grotesque", sans-serif;
+        margin: 8px 0;
+      }
+      nav {
+        padding: 12px;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+      }
+      main, nav {
+        width: 70%;
+        max-width: 960px;
+        margin: 0 auto;
+      }
+
+      section {
+        padding: 1rem 0;
+        margin: 5rem 0;
+
+        & h2 {
+          margin: 24px 0;
+
+          &+ p {
+            margin: 0 0 48px 0;
+          }
+        }
+      }
+      ul {
+        list-style: disc outside;
+        padding: 0;
+      }
+
+      a {
+        &:hover {
+          font-style: italic;
+        }
+      }
+      button, a.btn-like {
+        border: none;
+        background: none;
+        padding: 8px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        text-decoration: none;
+
+        &:hover {
+          background: #bbb;
+          font-style: normal;
+        }
+      }
+      button.primary {
+        background-color: cornflowerblue;
+
+        &:hover {
+          background-color: #4a86f0;
+        }
+      }
+
+      figure {
+        & img {
+          border-radius: 8px;
+        }
+      }
+      @media (width < 1024px) {
+        main, nav {
+          width: 80%;
+        }
+
+        section {
+          margin: 2rem 24px;
+        }
+      }
+      @media (width < 768px) {
+        main, nav {
+          width: 100%;
+        }
+      }
+
+      footer {
+        min-height: 50vh;
+        padding: 48px 15%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: baseline;
+
+        & section {
+          margin: 1rem 24px;
+        }
+
+        & ul {
+          list-style: none;
+        }
+      }
+      @media (width < 1024px) {
+        footer {
+          min-height: fit-content;
+          gap: 48px;
+          gap: 48px;
+
+          &> section:first-child {
+            order: 3;
+            flex: 1 0 100%;
+          }
+
+          &> section {
+            margin: 0;
+            padding: 0;
+          }
+        }
+      }
+      @media (width < 768px) {
+        footer {
+          padding: 12px;
+          flex-flow: column-reverse;
+        }
+      }
+    </style>
+  </head>
+</head>
     <body>
         <h1 id="kriti-studio">Kriti Studio</h1>
         <p>
@@ -71,8 +205,12 @@
         <p>
             You can have other columns like image, URLs, description. Upto you.
         </p>
+
+        <p>Check this sample Google Sheet with all the above rules.</p>
+
         <iframe
             src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRaTygCZZHfZAaIhxocsG7UC8mWHQj0iwdM62NG6JzPPI3OLJsybaxeU2VSCuF8ZzQ-_lOTlWRY8a6g/pubhtml?widget=true&amp;headers=false"
+            width="80%"
         ></iframe>
 
         <h2 id="importing-data">Importing data</h2>
