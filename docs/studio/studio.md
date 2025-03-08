@@ -43,7 +43,7 @@ then the URL for that webpage would be `domain/jobs/job-123`. No special charact
 
 You can have other columns like image, URLs, description. Upto you.
 
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRaTygCZZHfZAaIhxocsG7UC8mWHQj0iwdM62NG6JzPPI3OLJsybaxeU2VSCuF8ZzQ-_lOTlWRY8a6g/pubhtml?widget=true&amp;headers=false"></iframe>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSzv5SvBT0e8Bo--wrTJ8hMVGz-UNwh_4HHCcJ2a6-Q5EYPUzEexIQbVMZddhc9ld8Ci0D9FqWKKn3-/pubhtml?widget=true&amp;headers=false" width="80%"></iframe>
 
 ## Importing data
 

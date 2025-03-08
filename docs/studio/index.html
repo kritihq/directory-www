@@ -1,310 +1,355 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Docs | Kriti Directory</title>
-    <link href="/kriti-normalize-modern.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-    <style>
-      body {
-        font-family: "Inter", serif;
-      }
-      h1, h2 {
-        font-family: "Bricolage Grotesque", sans-serif;
-        margin: 8px 0;
-      }
-      nav {
-        padding: 12px;
-        display: flex;
-        flex-flow: row nowrap;
-        align-items: center;
-        justify-content: space-between;
-      }
-      main, nav {
-        width: 70%;
-        max-width: 960px;
-        margin: 0 auto;
-      }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Docs | Kriti Directory</title>
+        <link href="/kriti-normalize-modern.css" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            body {
+                font-family: "Inter", serif;
+            }
+            h1,
+            h2 {
+                font-family: "Bricolage Grotesque", sans-serif;
+                margin: 8px 0;
+            }
+            nav {
+                padding: 12px;
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                justify-content: space-between;
+            }
+            main,
+            nav {
+                width: 70%;
+                max-width: 960px;
+                margin: 0 auto;
+            }
 
-      section {
-        padding: 1rem 0;
-        margin: 5rem 0;
+            section {
+                padding: 1rem 0;
+                margin: 5rem 0;
 
-        & h2 {
-          margin: 24px 0;
+                & h2 {
+                    margin: 24px 0;
 
-          &+ p {
-            margin: 0 0 48px 0;
-          }
-        }
-      }
-      ul {
-        list-style: disc outside;
-        padding: 0;
-      }
+                    & + p {
+                        margin: 0 0 48px 0;
+                    }
+                }
+            }
+            ul {
+                list-style: disc outside;
+                padding: 0;
+            }
 
-      a {
-        &:hover {
-          font-style: italic;
-        }
-      }
-      button, a.btn-like {
-        border: none;
-        background: none;
-        padding: 8px 12px;
-        border-radius: 4px;
-        cursor: pointer;
-        text-decoration: none;
+            a {
+                &:hover {
+                    font-style: italic;
+                }
+            }
+            button,
+            a.btn-like {
+                border: none;
+                background: none;
+                padding: 8px 12px;
+                border-radius: 4px;
+                cursor: pointer;
+                text-decoration: none;
 
-        &:hover {
-          background: #bbb;
-          font-style: normal;
-        }
-      }
-      button.primary {
-        background-color: cornflowerblue;
+                &:hover {
+                    background: #bbb;
+                    font-style: normal;
+                }
+            }
+            button.primary {
+                background-color: cornflowerblue;
 
-        &:hover {
-          background-color: #4a86f0;
-        }
-      }
+                &:hover {
+                    background-color: #4a86f0;
+                }
+            }
 
-      figure {
-        & img {
-          border-radius: 8px;
-        }
-      }
-      @media (width < 1024px) {
-        main, nav {
-          width: 80%;
-        }
+            figure {
+                & img {
+                    border-radius: 8px;
+                }
+            }
+            @media (width < 1024px) {
+                main,
+                nav {
+                    width: 80%;
+                }
 
-        section {
-          margin: 2rem 24px;
-        }
-      }
-      @media (width < 768px) {
-        main, nav {
-          width: 100%;
-        }
-      }
+                section {
+                    margin: 2rem 24px;
+                }
+            }
+            @media (width < 768px) {
+                main,
+                nav {
+                    width: 100%;
+                }
+            }
 
-      footer {
-        min-height: 50vh;
-        padding: 48px 15%;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        align-items: baseline;
+            footer {
+                min-height: 50vh;
+                padding: 48px 15%;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+                align-items: baseline;
 
-        & section {
-          margin: 1rem 24px;
-        }
+                & section {
+                    margin: 1rem 24px;
+                }
 
-        & ul {
-          list-style: none;
-        }
-      }
-      @media (width < 1024px) {
-        footer {
-          min-height: fit-content;
-          gap: 48px;
-          gap: 48px;
+                & ul {
+                    list-style: none;
+                }
+            }
+            @media (width < 1024px) {
+                footer {
+                    min-height: fit-content;
+                    gap: 48px;
+                    gap: 48px;
 
-          &> section:first-child {
-            order: 3;
-            flex: 1 0 100%;
-          }
+                    & > section:first-child {
+                        order: 3;
+                        flex: 1 0 100%;
+                    }
 
-          &> section {
-            margin: 0;
-            padding: 0;
-          }
-        }
-      }
-      @media (width < 768px) {
-        footer {
-          padding: 12px;
-          flex-flow: column-reverse;
-        }
-      }
-    </style>
-  </head>
-</head>
+                    & > section {
+                        margin: 0;
+                        padding: 0;
+                    }
+                }
+            }
+            @media (width < 768px) {
+                footer {
+                    padding: 12px;
+                    flex-flow: column-reverse;
+                }
+            }
+        </style>
+    </head>
     <body>
-        <h1 id="kriti-studio">Kriti Studio</h1>
-        <p>
-            Kriti Studio is a web-only, no code, drag and drop builder which
-            allow you to design your sites however you see fit. Its your brand
-            after all.
-        </p>
-        <h2 id="data-collections-records">Data, Collections &amp; Records</h2>
-        <h3 id="data">Data</h3>
-        <p>
-            Or Excel file which contains all the listings/records which will be
-            served by the directory.
-        </p>
-        <h3 id="collections">Collections</h3>
-        <p>
-            Or worksheets in excel file, are collection of records. E.g. if the
-            directory is about &quot;Job Listings&quot; then the collection
-            would &quot;jobs&quot;. It is expected that minimum 2 collections
-            are present.
-        </p>
-        <ol>
-            <li>
-                <strong> _collections</strong>: This is &quot;reserved&quot;
-                worksheet/collection which contains metadata for the directory.
-                Every directory can host multiple collections. E.g. For Job
-                Listings directory, there can be &quot;jobs&quot; and
-                &quot;companies&quot; as different collections. This worksheet
-                named as &quot;_collections&quot; contains all the collections
-                served by the directory.
-            </li>
-        </ol>
-        <p>
-            Required columns: a. <code>id</code>: Number. Unique serial ID for
-            every row in the worksheet b. <code>collection</code>: Text. Unique,
-            name of other worksheets which are collections served by the
-            directory
-        </p>
-        <p>
-            Optional columns: a. <code>slug</code>: Text. Unique, URL slug for
-            this collection. For &quot;job&quot; collection if the slug is
-            &quot;jobs&quot; then all the records/listings under this collection
-            would have URL <code>domain/jobs/{job-id}</code>. If not provided
-            then a slug is autogenerated based on worksheet name.
-        </p>
-        <p>You can other columns too.</p>
-        <ol>
-            <li>
-                Your collections: This is the actual collections which are
-                served by the directory e.g. &quot;jobs&quot; or
-                &quot;companies&quot;. Each collection has its own worksheet
-                with unique name (no special characters except underscore). Name
-                of this worksheet is added under <code>collection</code> column
-                in <code>_collections</code> worksheet, effectively registering
-                this collection.
-            </li>
-        </ol>
-        <p>
-            Required columns: a. <code>id</code>: Number. Unique serial ID for
-            every row in the worksheet b. <code>title</code>: Text. Unqiue,
-            title of every record/listing in this collection
-        </p>
-        <p>
-            Optional columns: a. <code>slug</code>: Text. Unique, URL slug for
-            this record/listing. For a particular job under jobs collection, if
-            the slug is &quot;job-123&quot;, then the URL for that webpage would
-            be <code>domain/jobs/job-123</code>. No special characters except
-            hyphens.
-        </p>
-        <p>
-            You can have other columns like image, URLs, description. Upto you.
-        </p>
+        <main>
+            <h1 id="kriti-studio">Kriti Studio</h1>
+            <p>
+                Kriti Studio is a web-only, no code, drag and drop builder which
+                allow you to design your sites however you see fit. Its your
+                brand after all.
+            </p>
 
-        <p>Check this sample Google Sheet with all the above rules.</p>
+            <section>
+                <h2 id="data-collections-records">
+                    Data, Collections &amp; Records
+                </h2>
+                <h3 id="data">Data</h3>
+                <p>
+                    Or Excel file which contains all the listings/records which
+                    will be served by the directory.
+                </p>
+                <h3 id="collections">Collections</h3>
+                <p>
+                    Or worksheets in excel file, are collection of records. E.g.
+                    if the directory is about &quot;Job Listings&quot; then the
+                    collection would &quot;jobs&quot;. It is expected that
+                    minimum 2 collections are present.
+                </p>
+                <ol>
+                    <li>
+                        <strong> _collections</strong>: This is
+                        &quot;reserved&quot; worksheet/collection which contains
+                        metadata for the directory. Every directory can host
+                        multiple collections. E.g. For Job Listings directory,
+                        there can be &quot;jobs&quot; and &quot;companies&quot;
+                        as different collections. This worksheet named as
+                        &quot;_collections&quot; contains all the collections
+                        served by the directory.
+                    </li>
+                </ol>
+                <p>
+                    Required columns: a. <code>id</code>: Number. Unique serial
+                    ID for every row in the worksheet b.
+                    <code>collection</code>: Text. Unique, name of other
+                    worksheets which are collections served by the directory
+                </p>
+                <p>
+                    Optional columns: a. <code>slug</code>: Text. Unique, URL
+                    slug for this collection. For &quot;job&quot; collection if
+                    the slug is &quot;jobs&quot; then all the records/listings
+                    under this collection would have URL
+                    <code>domain/jobs/{job-id}</code>. If not provided then a
+                    slug is autogenerated based on worksheet name.
+                </p>
+                <p>You can other columns too.</p>
+                <ol>
+                    <li>
+                        Your collections: This is the actual collections which
+                        are served by the directory e.g. &quot;jobs&quot; or
+                        &quot;companies&quot;. Each collection has its own
+                        worksheet with unique name (no special characters except
+                        underscore). Name of this worksheet is added under
+                        <code>collection</code> column in
+                        <code>_collections</code> worksheet, effectively
+                        registering this collection.
+                    </li>
+                </ol>
+                <p>
+                    Required columns: a. <code>id</code>: Number. Unique serial
+                    ID for every row in the worksheet b. <code>title</code>:
+                    Text. Unqiue, title of every record/listing in this
+                    collection
+                </p>
+                <p>
+                    Optional columns: a. <code>slug</code>: Text. Unique, URL
+                    slug for this record/listing. For a particular job under
+                    jobs collection, if the slug is &quot;job-123&quot;, then
+                    the URL for that webpage would be
+                    <code>domain/jobs/job-123</code>. No special characters
+                    except hyphens.
+                </p>
+                <p>
+                    You can have other columns like image, URLs, description.
+                    Upto you.
+                </p>
 
-        <iframe
-            src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRaTygCZZHfZAaIhxocsG7UC8mWHQj0iwdM62NG6JzPPI3OLJsybaxeU2VSCuF8ZzQ-_lOTlWRY8a6g/pubhtml?widget=true&amp;headers=false"
-            width="80%"
-        ></iframe>
+                <p>Check this sample Google Sheet with all the above rules.</p>
 
-        <h2 id="importing-data">Importing data</h2>
-        <p>
-            Before you begin you need to import all data (listings). This data
-            affects pages created and dynamic data that can be populated.
-        </p>
-        <p>
-            For every new project, importing data is required step you cannot
-            proceed to designing without it. For subsequent design or to update
-            data in future, go over to data tab and import again, check this
-            video for demo.
-        </p>
-        <p>
-            This video demonstrates, initial import when project is newly
-            created. The imported excel only cantains one worksheet
-            &quot;pages&quot; (slug &quot;/pages2&quot;). Later new worksheet is
-            imported with 2 worksheets &quot;pages&quot; (slug
-            &quot;/pages&quot;) &amp; &quot;search_engines&quot; (slug
-            &quot;/se&quot;) from the Data tab.
-        </p>
-        <video controls width="80%">
-            <source src="/assets/docs/import-data.mp4" type="video/mp4" />
-        </video>
+                <iframe
+                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSzv5SvBT0e8Bo--wrTJ8hMVGz-UNwh_4HHCcJ2a6-Q5EYPUzEexIQbVMZddhc9ld8Ci0D9FqWKKn3-/pubhtml?widget=true&amp;headers=false"
+                    width="80%"
+                ></iframe>
+            </section>
 
-        <p>
-            After importing, the Data tab shows available variables for the
-            imported collection.
-        </p>
-        <h2 id="how-to-design">How to design</h2>
-        <p>
-            To begin, start by opening the elements pane from right side and
-            drag any element on to the canvas.
-        </p>
-        <p><strong>Demo:</strong> Adding a H1 (header 1) element</p>
-        <video controls width="80%">
-            <source src="/assets/docs/drag-drop-elems.mp4" type="video/mp4" />
-        </video>
+            <section>
+                <h2 id="importing-data">Importing data</h2>
+                <p>
+                    Before you begin you need to import all data (listings).
+                    This data affects pages created and dynamic data that can be
+                    populated.
+                </p>
+                <p>
+                    For every new project, importing data is required step you
+                    cannot proceed to designing without it. For subsequent
+                    design or to update data in future, go over to data tab and
+                    import again, check this video for demo.
+                </p>
+                <p>
+                    This video demonstrates, initial import when project is
+                    newly created. The imported excel only cantains one
+                    worksheet &quot;pages&quot; (slug &quot;/pages2&quot;).
+                    Later new worksheet is imported with 2 worksheets
+                    &quot;pages&quot; (slug &quot;/pages&quot;) &amp;
+                    &quot;search_engines&quot; (slug &quot;/se&quot;) from the
+                    Data tab.
+                </p>
+                <video controls width="80%">
+                    <source
+                        src="/assets/docs/import-data.mp4"
+                        type="video/mp4"
+                    />
+                </video>
 
-        <p>
-            <strong>Demo 2:</strong> Adding an IMG (image) element Certain
-            elments require additional data to be displayed. E.g. Image or Link
-            which require to you add src attributes.
-        </p>
-        <video controls width="80%">
-            <source src="/assets/docs/drag-drop-img.mp4" type="video/mp4" />
-        </video>
+                <p>
+                    After importing, the Data tab shows available variables for
+                    the imported collection.
+                </p>
+            </section>
 
-        <h2 id="element-types-static-vs-dynamic">
-            Element types: static vs dynamic
-        </h2>
-        <p>Content can be either of</p>
-        <ol>
-            <li>
-                Static: Always constant no matter what, imagine static text on
-                webpage.
-            </li>
-            <li>
-                Dynamic: Depends on webpage&#39;s slug, imagine text or an image
-                which changes based on each record&#39;s page.
-            </li>
-        </ol>
-        <h3 id="adding-static-elements">Adding static elements</h3>
-        <p>
-            Its rather easy just drag and drop any element on to canvas. Its
-            static by default.
-        </p>
-        <h3 id="adding-dynamic-elements">Adding dynamic elements</h3>
-        <p>
-            Drag any element onto canvas. Depending on element type you&#39;ll
-            have to add dynamic content.
-        </p>
-        <p>
-            <strong>For text types</strong>, edit the text and add text in
-            following format
-            <code>{{ record &quot;&lt;column name&gt;&quot; }}</code>. Here
-            <code>&lt;column name&gt;</code> is column name from the
-            spreadhseet. Or better yet, just copy the column from Data tab.
-        </p>
-        <p>Demo:</p>
-        <video controls width="80%">
-            <source src="/assets/docs/dynamic-text.mp4" type="video/mp4" />
-        </video>
+            <section>
+                <h2 id="how-to-design">How to design</h2>
+                <p>
+                    To begin, start by opening the elements pane from right side
+                    and drag any element on to the canvas.
+                </p>
+                <p><strong>Demo:</strong> Adding a H1 (header 1) element</p>
+                <video controls width="80%">
+                    <source
+                        src="/assets/docs/drag-drop-elems.mp4"
+                        type="video/mp4"
+                    />
+                </video>
 
-        <p>
-            <strong>For image or link</strong>, Images and link require extra
-            information to work. This fields are available under Styles tab.
-            Process is still the same, add
-            <code>{{ record &quot;&lt;column name&gt; }}</code> or copy column
-            from Data tab.
-        </p>
-        <p>Demo:</p>
-        <video controls width="80%">
-            <source src="/assets/docs/dynamic-img.mp4" type="video/mp4" />
-        </video>
+                <p>
+                    <strong>Demo 2:</strong> Adding an IMG (image) element
+                    Certain elments require additional data to be displayed.
+                    E.g. Image or Link which require to you add src attributes.
+                </p>
+                <video controls width="80%">
+                    <source
+                        src="/assets/docs/drag-drop-img.mp4"
+                        type="video/mp4"
+                    />
+                </video>
+            </section>
+
+            <section>
+                <h2 id="element-types-static-vs-dynamic">
+                    Element types: static vs dynamic
+                </h2>
+                <p>Content can be either of</p>
+                <ol>
+                    <li>
+                        Static: Always constant no matter what, imagine static
+                        text on webpage.
+                    </li>
+                    <li>
+                        Dynamic: Depends on webpage&#39;s slug, imagine text or
+                        an image which changes based on each record&#39;s page.
+                    </li>
+                </ol>
+                <h3 id="adding-static-elements">Adding static elements</h3>
+                <p>
+                    Its rather easy just drag and drop any element on to canvas.
+                    Its static by default.
+                </p>
+                <h3 id="adding-dynamic-elements">Adding dynamic elements</h3>
+                <p>
+                    Drag any element onto canvas. Depending on element type
+                    you&#39;ll have to add dynamic content.
+                </p>
+                <p>
+                    <strong>For text types</strong>, edit the text and add text
+                    in following format
+                    <code>{{ record &quot;&lt;column name&gt;&quot; }}</code>.
+                    Here <code>&lt;column name&gt;</code> is column name from
+                    the spreadhseet. Or better yet, just copy the column from
+                    Data tab.
+                </p>
+                <p>Demo:</p>
+                <video controls width="80%">
+                    <source
+                        src="/assets/docs/dynamic-text.mp4"
+                        type="video/mp4"
+                    />
+                </video>
+
+                <p>
+                    <strong>For image or link</strong>, Images and link require
+                    extra information to work. This fields are available under
+                    Styles tab. Process is still the same, add
+                    <code>{{ record &quot;&lt;column name&gt; }}</code> or copy
+                    column from Data tab.
+                </p>
+                <p>Demo:</p>
+                <video controls width="80%">
+                    <source
+                        src="/assets/docs/dynamic-img.mp4"
+                        type="video/mp4"
+                    />
+                </video>
+            </section>
+        </main>
     </body>
 </html>
