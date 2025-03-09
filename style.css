@@ -23,7 +23,7 @@ h3 {
 }
 
 header {
-    padding: 12px;
+    padding: 12px 0;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
