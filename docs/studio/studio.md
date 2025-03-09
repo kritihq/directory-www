@@ -15,14 +15,14 @@ To begin, start by opening the elements pane from right side and drag any elemen
 
 __Demo:__ Adding a H1 (header 1) element
 
-<video controls width="80%">
+<video controls width="100%">
   <source src="/assets/docs/drag-drop-elems.mp4" type="video/mp4" />
 </video>
 
 __Demo 2:__ Adding an IMG (image) element
 Certain elments require additional data to be displayed. E.g. Image or Link which require to you add src attributes.
 
-<video controls width="80%">
+<video controls width="100%">
   <source src="/assets/docs/drag-drop-img.mp4" type="video/mp4" />
 </video>
 
@@ -47,7 +47,7 @@ Or better yet, just copy the column from Data tab.
 
 Demo:
 
-<video controls width="80%">
+<video controls width="100%">
   <source src="/assets/docs/dynamic-text.mp4" type="video/mp4" />
 </video>
 
@@ -57,6 +57,6 @@ copy column from Data tab.
 
 Demo:
 
-<video controls width="80%">
+<video controls width="100%">
   <source src="/assets/docs/dynamic-img.mp4" type="video/mp4" />
 </video>
