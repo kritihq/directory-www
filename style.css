@@ -61,7 +61,7 @@ ul {
 menu {
     list-style: decimal-leading-zero;
 }
-li {
+li article {
     margin: 12px 0 48px;
 }
 
