@@ -33,7 +33,7 @@
       section {
         padding: 1rem 0;
         margin: 5rem 0;
-        
+
         & h2 {
           margin: 24px 0;
 
@@ -46,7 +46,7 @@
         list-style: disc outside;
         padding: 0;
       }
-      
+
       a {
         &:hover {
           font-style: italic;
@@ -67,7 +67,7 @@
       }
       button.primary {
         background-color: cornflowerblue;
-        
+
         &:hover {
           background-color: #4a86f0;
         }
@@ -95,14 +95,14 @@
 
       #hero {
         & .features {
-          padding: 0; 
+          padding: 0;
           margin: 24px 0;
           list-style: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>') inside;
-          display: flex; 
-          align-items: center; 
-          justify-content: space-around; 
-          gap: 24px; 
-          
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          gap: 24px;
+
           & li::marker {
             padding: 12px;
           }
@@ -129,18 +129,18 @@
 
         & .benefits {
           text-align: left;
-          list-style: none; 
-          padding: 0; 
+          list-style: none;
+          padding: 0;
           margin: 24px 0;
 
           & li article {
-            display: flex; 
-            flex-flow: row wrap; 
-            align-items: stretch; 
+            display: flex;
+            flex-flow: row wrap;
+            align-items: stretch;
             justify-content: space-between;
             gap: 12px;
             margin: 128px 0;
-      
+
             & h3 { flex: 1 0 50%; }
             & figure { flex: 1 0 40%; }
           }
@@ -168,8 +168,8 @@
 
         & ol {
           text-align: left;
-          list-style: none; 
-          padding: 0; 
+          list-style: none;
+          padding: 0;
           margin: 24px 0;
           display: flex;
           flex-flow: row wrap;
@@ -204,8 +204,8 @@
 
         &> ul {
           text-align: left;
-          list-style: none; 
-          padding: 0; 
+          list-style: none;
+          padding: 0;
           margin: 24px 0;
           display: flex;
           flex-flow: row wrap;
@@ -273,7 +273,7 @@
 
         &> details {
           text-align: left;
-          padding: 0; 
+          padding: 0;
           margin: 24px 0 48px 0;
 
           &> summary h3 {
@@ -302,13 +302,13 @@
         padding: 48px;
 
         &> h2 {
-          margin: 0; 
+          margin: 0;
           padding: 0;
         }
 
         &> button {
-          margin-top: 24px; 
-          padding: 12px; 
+          margin-top: 24px;
+          padding: 12px;
           width: fit-content;
         }
       }
@@ -321,13 +321,13 @@
           padding: 12px;
         }
       }
-      
+
       footer {
         min-height: 50vh;
         padding: 48px 15%;
-        display: flex; 
-        flex-flow: row wrap; 
-        justify-content: space-between; 
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
         align-items: baseline;
 
         & section {
@@ -434,10 +434,12 @@
         </a>
       </main>
     </dialog>
-    <nav>
-      <p style="margin: 0; padding: 0;"><span style="font-family: Lora;">Kriti/ </span>Directory</p>
-      <button type="button" onclick="document.getElementById('dialog-login').showModal();">Login</button>
-    </nav>
+    <header>
+        <nav>
+            <p style="margin: 0; padding: 0;"><span style="font-family: Lora;">Kriti/ </span>Directory</p>
+            <button type="button" onclick="document.getElementById('dialog-login').showModal();">Login</button>
+        </nav>
+    </header>
     <main>
       <section id="hero" style="display: flex; flex-flow: column; align-items: center; text-align: center;">
         <h1 style="margin-top: 48px;">Publish directories from Excel<br><mark style="padding: 0 12px; border-radius: 8px;">No code, in Minutes</mark></h1>
