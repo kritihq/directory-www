@@ -69,3 +69,10 @@ For subsequent design or to update data in future, go over to data tab and impor
 
 This video demonstrates, initial import when project is newly created. The imported excel only cantains one worksheet "pages" (slug "/pages2").
 Later new worksheet is imported with 2 worksheets "pages" (slug "/pages") & "search_engines" (slug "/se") from the Data tab. After importing, the Data tab shows available variables for the imported collection.
+
+## Post Import
+
+After importing data (or reimporting), you'll observe that
+
+1. List of pages have changed from top left corner -- if number of collections or slug for any collection is updated
+2. Data tab has been updated -- if columns in any collection has been changed

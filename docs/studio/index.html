@@ -29,7 +29,22 @@
                 <li>A directory is already created. <a href="/docs/new-directory">How to?</a></li>
                 <li>All the data is ready in <code>.xlsx</code> file and imported. <a href="/docs/data">How to?</a></li>
                 </ol>
-                <h2 id="how-to-design">How to design</h2>
+                <h2 id="post-import-web-pages">Post import &amp; web pages</h2>
+                <p>After importing data, some web pages are auto generated based on the data. You can view this pages on top left corner drop down menu.</p>
+                <p>By default <code>index</code> and <code>404</code> are always present. <code>index</code> is the landing page and <code>404</code> is error page when visitor tries to access any URL which is not
+                served by the directory.</p>
+                <p>Post import, more pages are added based on collections (worksheets) in the <code>.xlsx</code> file. For every imported collection 2 pages are added:</p>
+                <ol>
+                <li><code>/collection</code>: Home page for that particular collection. E.g. <code>/jobs</code> is homepage for jobs collections which will list all the jobs in this excel file.</li>
+                <li><code>/collection/{{ record }}</code>: Page generated for individual row/record/listing in the collection. E.g. individual job listing from jobs.</li>
+                </ol>
+                <h2 id="adding-elements">Adding elements</h2>
+                <p>Select any page from top left corner and you can start adding elements to it. There are 2 types of elements:</p>
+                <ol>
+                <li>Static: Remains constant irrespective of the record.</li>
+                <li>Dynamic: Data changes based on page URL.</li>
+                </ol>
+                <h3 id="adding-static-elements">Adding static elements</h3>
                 <p>To begin, start by opening the elements pane from right side and drag any element on to the canvas.</p>
                 <p><strong>Demo:</strong> Adding a H1 (header 1) element</p>
                 <video controls width="100%">
@@ -37,37 +52,52 @@
                 </video>
 
                 <p><strong>Demo 2:</strong> Adding an IMG (image) element
-                Certain elments require additional data to be displayed. E.g. Image or Link which require to you add src attributes.</p>
+                Certain elements require additional data to be displayed. E.g. Image or Link which require to you add src attributes.</p>
                 <video controls width="100%">
                   <source src="/assets/docs/drag-drop-img.mp4" type="video/mp4" />
                 </video>
 
-
-                <h2 id="element-types-static-vs-dynamic">Element types: static vs dynamic</h2>
-                <p>Content can be either of</p>
-                <ol>
-                <li>Static: Always constant no matter what, imagine static text on webpage.</li>
-                <li>Dynamic: Depends on webpage&#39;s slug, imagine text or an image which changes based on each record&#39;s page.</li>
-                </ol>
-                <h3 id="adding-static-elements">Adding static elements</h3>
-                <p>Its rather easy just drag and drop any element on to canvas. Its static by default.</p>
                 <h3 id="adding-dynamic-elements">Adding dynamic elements</h3>
-                <p>Drag any element onto canvas. Depending on element type you&#39;ll have to add dynamic content.</p>
-                <p><strong>For text types</strong>, edit the text and add text in following format <code>{{ record &quot;&lt;column name&gt;&quot; }}</code>.
-                Here <code>&lt;column name&gt;</code> is column name from the spreadhseet.
+                <p>Depending on the element, dynamic variables must be added to the element. These variables are available from Data tab on the right section.
+                These variables are the columns present in respective collections.</p>
+                <p><em>For text types</em>, edit the text and add text in following format <code>{{ record &quot;&lt;column name&gt;&quot; }}</code>.
+                Here <code>&lt;column name&gt;</code> is column name from the spreadsheet.
                 Or better yet, just copy the column from Data tab.</p>
-                <p>Demo:</p>
+                <p><strong>Demo</strong>:</p>
                 <video controls width="100%">
                   <source src="/assets/docs/dynamic-text.mp4" type="video/mp4" />
                 </video>
 
-                <p><strong>For image or link</strong>, Images and link require extra information to work. This fields
+                <p><em>For image or link</em>, Images and link require extra information to work. This fields
                 are available under Styles tab. Process is still the same, add <code>{{ record &quot;&lt;column name&gt; }}</code> or
                 copy column from Data tab.</p>
-                <p>Demo:</p>
+                <p><strong>Demo</strong>:</p>
                 <video controls width="100%">
                   <source src="/assets/docs/dynamic-img.mp4" type="video/mp4" />
                 </video>
+
+                <h2 id="add-listings">Add Listings</h2>
+                <p>Since this is a directory there will be a need to add list of records (for any collection) somewhere.
+                There is already an element for that called &quot;listing&quot; in the &quot;Elements&quot; tab, drag and drop it on to canvas on any page.</p>
+                <p>After dropping it must be configured which is done from &quot;Styles&quot; tab.</p>
+                <figure>
+                    <img src="/assets/docs/listings-config.png" alt="Configs for listings element" width="100%">
+                    <figcaption>Configs for listings element</figcaption>
+                </figure>
+
+                <ol>
+                <li>Collection: Refers to which collection (worksheet) this listing refers to</li>
+                <li>Page Size: How many records must be fetched in 1 go, listings is an infinite scroll element which fetches records in batches</li>
+                <li>Direction: Ascending or Descending order based on <code>id</code> column of the collection</li>
+                </ol>
+                <p>To edit the listings, edit the very first element other elements will mimic it. By default <code>title</code> column and the record&#39;s <code>Page URL</code> are provided.
+                You can add more elements like image, description etc. to the listing make sure to bind variables from the same collection to them.</p>
+                <p><em>Demo</em>: Following video demonstrates how to add listing on <code>/index</code> page for &quot;companies&quot; collection.</p>
+                <video controls width="100%">
+                  <source src="/assets/docs/listings.mp4" type="video/mp4" />
+                </video>
+
+                <p>Any listing to any page i.e. it is possible to add listings for &quot;companies&quot; on &quot;/jobs&quot; page (would not makes sense but possible).</p>
             </article>
         </main>
         <footer>
