@@ -3,6 +3,12 @@
 Kriti Studio is a web-only, no code, drag and drop builder which
 allow you to design your sites however you see fit. Its your brand after all.
 
+## Prerequisites
+
+1. A directory is already created. [How to?](/docs/new-directory)
+2. All the data is ready in `.xlsx` file and imported. [How to?](/docs/data)
+
+
 ## How to design
 
 To begin, start by opening the elements pane from right side and drag any element on to the canvas.
