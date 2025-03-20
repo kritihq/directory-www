@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Markdown to HTML Converter</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            body {
+                display: flex;
+                height: 100vh;
+                background-color: #f9f9f9;
+            }
+
+            .container {
+                display: flex;
+                width: 100%;
+                height: 100%;
+            }
+
+            .input-section,
+            .output-section {
+                flex: 1;
+                padding: 20px;
+                overflow: auto;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .input-section {
+                border-right: 1px solid #e0e0e0;
+                background-color: white;
+            }
+
+            .output-section {
+                background-color: white;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+                margin-bottom: 15px;
+                color: #333;
+            }
+
+            textarea {
+                flex: 1;
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #e0e0e0;
+                border-radius: 4px;
+                resize: none;
+                font-family: monospace;
+                margin-bottom: 15px;
+                background-color: #fcfcfc;
+            }
+
+            button {
+                padding: 10px 15px;
+                background-color: #4285f4;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-weight: 500;
+                margin-bottom: 15px;
+            }
+
+            button:hover {
+                background-color: #3367d6;
+            }
+
+            .output-title {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .output-content {
+                flex: 1;
+                padding: 15px;
+                border: 1px solid #e0e0e0;
+                border-radius: 4px;
+                overflow: auto;
+                background-color: #fcfcfc;
+                font-family: monospace;
+                white-space: pre-wrap;
+            }
+
+            .label {
+                font-weight: 500;
+                margin-bottom: 8px;
+                color: #555;
+            }
+
+            .input-wrapper {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+            }
+
+            .input-wrapper textarea {
+                height: 25%;
+            }
+
+            .input-wrapper textarea:nth-child(2) {
+                height: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="input-section">
+                <h1>Input</h1>
+
+                <div class="input-wrapper">
+                    <div class="label">Wrapper Part 1</div>
+                    <textarea
+                        id="wrapper-part1"
+                        placeholder="Enter your HTML wrapper part 1..."
+                    ></textarea>
+
+                    <div class="label">Markdown</div>
+                    <textarea
+                        id="markdown-input"
+                        placeholder="Enter your markdown here..."
+                    ></textarea>
+
+                    <div class="label">Wrapper Part 2</div>
+                    <textarea
+                        id="wrapper-part2"
+                        placeholder="Enter your HTML wrapper part 2..."
+                    ></textarea>
+                </div>
+
+                <button id="convert-btn">Convert</button>
+            </div>
+
+            <div class="output-section">
+                <div class="output-title">
+                    <h1>HTML Output</h1>
+                    <button id="copy-btn">Copy HTML</button>
+                </div>
+                <div class="output-content" id="html-output"></div>
+            </div>
+        </div>
+
+        <script>
+            // Load showdown.js library for markdown conversion
+            document.head.appendChild(document.createElement("script")).src =
+                "https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js";
+
+            document.addEventListener("DOMContentLoaded", function () {
+                const markdownInput = document.getElementById("markdown-input");
+                const wrapperPart1 = document.getElementById("wrapper-part1");
+                const wrapperPart2 = document.getElementById("wrapper-part2");
+                const htmlOutput = document.getElementById("html-output");
+                const convertBtn = document.getElementById("convert-btn");
+                const copyBtn = document.getElementById("copy-btn");
+
+                // Wait for showdown to load
+                function checkShowdown() {
+                    if (typeof showdown !== "undefined") {
+                        initConverter();
+                    } else {
+                        setTimeout(checkShowdown, 100);
+                    }
+                }
+
+                function initConverter() {
+                    const converter = new showdown.Converter();
+
+                    // Set default values
+                    wrapperPart1.value = `<!DOCTYPE html>
+<html>
+<head>
+  <title>My Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Website</h1>
+  </header>
+  <main>`;
+
+                    markdownInput.value = `# Welcome to Markdown Converter
+
+## Features
+- Convert Markdown to HTML
+- Sandwich HTML between wrapper parts
+- View generated HTML output
+
+**Try editing this content** to see it change!
+
+> This is a blockquote.
+
+[Visit example.com](https://example.com)`;
+
+                    wrapperPart2.value = `  </main>
+  <footer>
+    <p>&copy; 2025 My Website</p>
+  </footer>
+</body>
+</html>`;
+
+                    // Initial conversion
+                    convertMarkdown();
+
+                    // Event listeners
+                    convertBtn.addEventListener("click", convertMarkdown);
+                    markdownInput.addEventListener(
+                        "input",
+                        debounce(convertMarkdown, 500),
+                    );
+                    wrapperPart1.addEventListener(
+                        "input",
+                        debounce(convertMarkdown, 500),
+                    );
+                    wrapperPart2.addEventListener(
+                        "input",
+                        debounce(convertMarkdown, 500),
+                    );
+                    copyBtn.addEventListener("click", copyHtml);
+
+                    function convertMarkdown() {
+                        try {
+                            // Convert markdown to HTML
+                            const markdown = markdownInput.value;
+                            const html = converter.makeHtml(markdown);
+
+                            // Combine with wrapper parts
+                            const finalHtml =
+                                wrapperPart1.value + html + wrapperPart2.value;
+
+                            // Display raw HTML in output
+                            htmlOutput.textContent = finalHtml;
+                        } catch (error) {
+                            htmlOutput.textContent = `Error: ${error.message}`;
+                        }
+                    }
+
+                    function copyHtml() {
+                        try {
+                            navigator.clipboard
+                                .writeText(htmlOutput.textContent)
+                                .then(function () {
+                                    const originalText = copyBtn.textContent;
+                                    copyBtn.textContent = "Copied!";
+                                    setTimeout(function () {
+                                        copyBtn.textContent = originalText;
+                                    }, 2000);
+                                });
+                        } catch (error) {
+                            alert("Failed to copy: " + error);
+                        }
+                    }
+
+                    function debounce(func, wait) {
+                        let timeout;
+                        return function () {
+                            const context = this,
+                                args = arguments;
+                            clearTimeout(timeout);
+                            timeout = setTimeout(function () {
+                                func.apply(context, args);
+                            }, wait);
+                        };
+                    }
+                }
+
+                checkShowdown();
+            });
+        </script>
+    </body>
+</html>
