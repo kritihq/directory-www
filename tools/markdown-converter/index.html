@@ -18,28 +18,26 @@
                 background-color: #f9f9f9;
             }
 
-            .container {
+            main {
                 display: flex;
                 width: 100%;
                 height: 100%;
-            }
 
-            .input-section,
-            .output-section {
-                flex: 1;
-                padding: 20px;
-                overflow: auto;
-                display: flex;
-                flex-direction: column;
+                & section {
+                    flex: 1;
+                    padding: 20px;
+                    overflow: auto;
+                    display: flex;
+                    flex-direction: column;
+                }
             }
 
             .input-section {
-                border-right: 1px solid #e0e0e0;
-                background-color: white;
+                flex: 0 1 30%;
             }
 
             .output-section {
-                background-color: white;
+                flex: 1 0;
             }
 
             h1 {
@@ -114,41 +112,28 @@
         </style>
     </head>
     <body>
-        <div class="container">
-            <div class="input-section">
+        <main class="container">
+            <section class="input-section">
                 <h1>Input</h1>
 
                 <div class="input-wrapper">
-                    <div class="label">Wrapper Part 1</div>
-                    <textarea
-                        id="wrapper-part1"
-                        placeholder="Enter your HTML wrapper part 1..."
-                    ></textarea>
-
-                    <div class="label">Markdown</div>
                     <textarea
                         id="markdown-input"
                         placeholder="Enter your markdown here..."
                     ></textarea>
-
-                    <div class="label">Wrapper Part 2</div>
-                    <textarea
-                        id="wrapper-part2"
-                        placeholder="Enter your HTML wrapper part 2..."
-                    ></textarea>
                 </div>
 
                 <button id="convert-btn">Convert</button>
-            </div>
+            </section>
 
-            <div class="output-section">
+            <section class="output-section">
                 <div class="output-title">
                     <h1>HTML Output</h1>
-                    <button id="copy-btn">Copy HTML</button>
+                    <button id="copy-btn" style="width: 10%">Copy HTML</button>
                 </div>
                 <div class="output-content" id="html-output"></div>
-            </div>
-        </div>
+            </section>
+        </main>
 
         <script>
             // Load showdown.js library for markdown conversion
@@ -175,27 +160,6 @@
                 function initConverter() {
                     const converter = new showdown.Converter();
 
-                    // Set default values
-                    wrapperPart1.value = `<!DOCTYPE html>
-<html>
-<head>
-  <title>My Page</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      padding: 20px;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>My Website</h1>
-  </header>
-  <main>`;
-
                     markdownInput.value = `# Welcome to Markdown Converter
 
 ## Features
@@ -209,13 +173,6 @@
 
 [Visit example.com](https://example.com)`;
 
-                    wrapperPart2.value = `  </main>
-  <footer>
-    <p>&copy; 2025 My Website</p>
-  </footer>
-</body>
-</html>`;
-
                     // Initial conversion
                     convertMarkdown();
 
@@ -225,14 +182,7 @@
                         "input",
                         debounce(convertMarkdown, 500),
                     );
-                    wrapperPart1.addEventListener(
-                        "input",
-                        debounce(convertMarkdown, 500),
-                    );
-                    wrapperPart2.addEventListener(
-                        "input",
-                        debounce(convertMarkdown, 500),
-                    );
+
                     copyBtn.addEventListener("click", copyHtml);
 
                     function convertMarkdown() {
@@ -241,12 +191,8 @@
                             const markdown = markdownInput.value;
                             const html = converter.makeHtml(markdown);
 
-                            // Combine with wrapper parts
-                            const finalHtml =
-                                wrapperPart1.value + html + wrapperPart2.value;
-
                             // Display raw HTML in output
-                            htmlOutput.textContent = finalHtml;
+                            htmlOutput.textContent = html;
                         } catch (error) {
                             htmlOutput.textContent = `Error: ${error.message}`;
                         }

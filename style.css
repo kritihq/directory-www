@@ -92,10 +92,15 @@ button.primary {
     }
 }
 
+img {
+    border-radius: 8px;
+    margin: 24px 0;
+    width: 100%;
+}
+
 figure {
     margin: 24px 0;
     & img {
-        border-radius: 8px;
     }
 }
 
