@@ -21,51 +21,57 @@
         </header>
         <main>
             <article>
-                <h1 id="page-metadata-seo">Page Metadata &amp; SEO</h1>
-                <p>This documentation explains how to add page meta data in your application using the built-in &quot;Page Meta &amp; SEO&quot; panel. The panel provides an easy way to manage meta data fields to improve your page’s SEO. Follow the instructions below to add new meta data fields and input the necessary information.</p>
+                <h1 id="pagemetadataseo">Page Metadata &amp; SEO</h1>
+                <p>This documentation explains how to add page meta data in your application using the built-in "Page Meta &amp; SEO" panel. The panel provides an easy way to manage meta data fields to improve your page’s SEO. Follow the instructions below to add new meta data fields and input the necessary information.</p>
                 <video controls width="100%">
                   <source src="/assets/docs/page-seo/seo-demo.webm" type="video/webm" />
                 </video>
-
-                <h2 id="adding-metadata">Adding Metadata</h2>
+                <h2 id="addingmetadata">Adding Metadata</h2>
                 <ol>
-                <li><p>Accessing the &quot;Page Meta &amp; SEO&quot; Panel</p>
-                <p>Locate and click the accordian &quot;Page Meta &amp; SEO&quot; on top left corner below page selector. Clicking on it will expand the section to reveal the meta data form.</p>
-                <p><img src="/assets/docs/page-seo/seo-locate-panel.gif" alt="Page Meta &amp; SEO Panel"></p>
-                </li>
-                <li><p>Adding a New Field</p>
-                <p>Find the &quot;Add&quot; drop down at bottom of the Page Meta &amp; SEO panel. It has some preconfigured <code>&lt;meta /&gt;</code> fields along with &quot;Custom&quot; option.
-                Preconfigured <code>&lt;meta /&gt;</code> fields add known meta tags like <code>title</code>, <code>description</code>, <code>keywords</code>, etc to page. If any field is not listed, use the &quot;Custom&quot; option to add a new field.</p>
-                <p><img src="/assets/docs/page-seo/seo-add.png" alt="Add Meta Field"></p>
-                <p>It makes sense for certain fields to be duplicated for same page e.g. <code>Favicon</code> but not others e.g. <code>Title</code>, <code>Description</code> or <code>Canonical URL</code>.</p>
-                </li>
-                <li><p>Entering Values into the New Field</p>
+                <li><p><strong>Accessing the "Page Meta & SEO" Panel</strong></p>
+                <p>Locate and click the accordian "Page Meta &amp; SEO" on top left corner below page selector. Clicking on it will expand the section to reveal the meta data form.</p>
+                <p><img src="/assets/docs/page-seo/seo-locate-panel.gif" alt="Page Meta & SEO Panel" /></p></li>
+                </ol>
+                <p><br/></p>
+                <ol start="2">
+                <li><p><strong>Adding a New Field</strong></p>
+                <p>Find the "Add" drop down at bottom of the Page Meta &amp; SEO panel. It has some preconfigured <code>&lt;meta /&gt;</code> fields along with "Custom" option.
+                Preconfigured <code>&lt;meta /&gt;</code> fields add known meta tags like <code>title</code>, <code>description</code>, <code>keywords</code>, etc to page. If any field is not listed, use the "Custom" option to add a new field.</p>
+                <p><img src="/assets/docs/page-seo/seo-add.png" alt="Add Meta Field"  style="width: 400px; height: 400px;"></p>
+                <p>It makes sense for certain fields to be duplicated for same page e.g. <code>Favicon</code> but not others e.g. <code>Title</code>, <code>Description</code> or <code>Canonical URL</code>.</p></li>
+                </ol>
+                <p><br/></p>
+                <ol start="3">
+                <li><p><strong>Entering Values into the New Field</strong></p>
                 <p>Every meta item has one or more input field corresponding to an attribute of <code>&lt;meta /&gt;</code> tag. Enter the appropriate values for the field. Make sure the values meet any specific requirements or character limits defined by your overall SEO strategy.</p>
-                <p><img src="/assets/docs/page-seo/seo-static-values.webp" alt="Meta Field Static values"></p>
+                <p><img src="/assets/docs/page-seo/seo-static-values.webp" alt="Meta Field Static values" /></p>
                 <p>These input fields support both static and dynamic values. For dynamic values, use the <code>{{ }}</code> syntax to reference a variable or a function.
                 For pages such as <code>index</code> or <code>404</code> page may require static values since they stay constant but for dynamic pages generated for every collection, it makes more sense to have dynamic values. Use the data panel from right hand side to easily copy a data variable.</p>
-                <p><img src="/assets/docs/page-seo/seo-dynamic-values.webp" alt="Meta Field Dynamic values"></p>
-                </li>
-                <li><p>Custom Meta fields</p>
-                <p>To add custom <code>&lt;meta /&gt;</code> fields, select the &quot;Custom&quot; option from the &quot;Add&quot; dropdown. This will add a new field to the form where you can enter the name of the meta tag and its content. This field also support static and dynamic values.</p>
-                <p><img src="/assets/docs/page-seo/seo-custom-static.webp" alt="Meta Custom Field Static value"></p>
+                <p><img src="/assets/docs/page-seo/seo-dynamic-values.webp" alt="Meta Field Dynamic values" /></p></li>
+                </ol>
+                <p><br/></p>
+                <ol start="4">
+                <li><p><strong>Custom Meta fields</strong></p>
+                <p>To add custom <code>&lt;meta /&gt;</code> fields, select the "Custom" option from the "Add" dropdown. This will add a new field to the form where you can enter the name of the meta tag and its content. This field also support static and dynamic values.</p>
+                <p><img src="/assets/docs/page-seo/seo-custom-static.webp" alt="Meta Custom Field Static value" /></p>
                 <p>For dynamic values,</p>
                 <ul>
                 <li>it is possible to add these values for attributes such as
-                <img src="/assets/docs/page-seo/seo-custom-dynamic-1.webp" alt="Meta Custom Field Dynamic attributes"></li>
+                <img src="/assets/docs/page-seo/seo-custom-dynamic-1.webp" alt="Meta Custom Field Dynamic attributes" /></li>
                 <li>or add complete <code>&lt;meta /&gt;</code> tag as dynamic value.
-                <img src="/assets/docs/page-seo/seo-custom-dynamic-2.webp" alt="Meta Custom Field Dynamic value"></li>
-                </ul>
-                </li>
-                <li><p>Ordering Meta Fields</p>
-                <p>Certain meta tags such as stylesheets, scripts, etc. need to be ordered in a specific way. To reorder the meta fields, click the arrow buttons on left side of the field to move it up or down in the list. This provides precise control over the order of the meta tags and ensures that they are rendered correctly in the page’s HTML.</p>
-                <p>Note: The order of meta tags can affect the page’s performance and SEO, so it is important to arrange them properly. This can also affect page is rendered when custom stylesheets are provided.</p>
-                </li>
-                <li><p>Removing a Field</p>
-                <p>Click the cross button on right side of the field to remove it from the list. This will delete the field and its content from the page’s meta data.</p>
-                </li>
+                <img src="/assets/docs/page-seo/seo-custom-dynamic-2.webp" alt="Meta Custom Field Dynamic value" /></li></ul></li>
                 </ol>
-            </article>
+                <p><br/></p>
+                <ol start="5">
+                <li><p><strong>Ordering Meta Fields</strong></p>
+                <p>Certain meta tags such as stylesheets, scripts, etc. need to be ordered in a specific way. To reorder the meta fields, click the arrow buttons on left side of the field to move it up or down in the list. This provides precise control over the order of the meta tags and ensures that they are rendered correctly in the page’s HTML.</p>
+                <p>Note: The order of meta tags can affect the page’s performance and SEO, so it is important to arrange them properly. This can also affect page is rendered when custom stylesheets are provided.</p></li>
+                </ol>
+                <p><br/></p>
+                <ol start="6">
+                <li><p><strong>Removing a Field</strong></p>
+                <p>Click the cross button on right side of the field to remove it from the list. This will delete the field and its content from the page’s meta data.</p></li>
+                </ol>            </article>
         </main>
         <footer>
             <section>

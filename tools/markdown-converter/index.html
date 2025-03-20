@@ -13,7 +13,6 @@
             }
 
             body {
-                display: flex;
                 height: 100vh;
                 background-color: #f9f9f9;
             }
@@ -110,11 +109,21 @@
                 height: 50%;
             }
         </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
     </head>
     <body>
+        <header style="padding: 48px 24px">
+            <h1>Convert Markdown to HTML</h1>
+            <p>
+                Enter your markdown content below to convert it to HTML by
+                <a href="/" style="text-decoration: none"
+                    ><span style="font-family: Lora">Kriti/ </span>Directory</a
+                >
+            </p>
+        </header>
         <main class="container">
             <section class="input-section">
-                <h1>Input</h1>
+                <h2>Input</h2>
 
                 <div class="input-wrapper">
                     <textarea
@@ -128,7 +137,7 @@
 
             <section class="output-section">
                 <div class="output-title">
-                    <h1>HTML Output</h1>
+                    <h2>HTML Output</h2>
                     <button id="copy-btn" style="width: 10%">Copy HTML</button>
                 </div>
                 <div class="output-content" id="html-output"></div>
@@ -136,14 +145,8 @@
         </main>
 
         <script>
-            // Load showdown.js library for markdown conversion
-            document.head.appendChild(document.createElement("script")).src =
-                "https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js";
-
             document.addEventListener("DOMContentLoaded", function () {
                 const markdownInput = document.getElementById("markdown-input");
-                const wrapperPart1 = document.getElementById("wrapper-part1");
-                const wrapperPart2 = document.getElementById("wrapper-part2");
                 const htmlOutput = document.getElementById("html-output");
                 const convertBtn = document.getElementById("convert-btn");
                 const copyBtn = document.getElementById("copy-btn");
