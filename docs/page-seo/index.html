@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Docs | Kriti Directory</title>
+        <link href="/kriti-normalize-modern.css" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="/style.css" />
+    </head>
+    <body>
+        <header>
+            <nav>
+                <p style="margin: 0; padding: 0;"><a href="/" style="text-decoration: none;"><span style="font-family: Lora;">Kriti/ </span>Directory</a></p>
+            </nav>
+        </header>
+        <main>
+            <article>
+                <h1 id="page-metadata-seo">Page Metadata &amp; SEO</h1>
+                <p>This documentation explains how to add page meta data in your application using the built-in &quot;Page Meta &amp; SEO&quot; panel. The panel provides an easy way to manage meta data fields to improve your page’s SEO. Follow the instructions below to add new meta data fields and input the necessary information.</p>
+                <video controls width="100%">
+                <source src="/page-seo/assets/seo-demo.webm" type="video/webm" />
+                </video>
+
+                <h2 id="adding-metadata">Adding Metadata</h2>
+                <ol>
+                <li>Accessing the &quot;Page Meta &amp; SEO&quot; Panel</li>
+                </ol>
+                <p>Locate and click the accordian &quot;Page Meta &amp; SEO&quot; on top left corner below page selector. Clicking on it will expand the section to reveal the meta data form.</p>
+                <p><img src="/page-seo/assets/seo-locate-panel.gif" alt="Page Meta &amp; SEO Panel"></p>
+                <ol>
+                <li>Adding a New Field</li>
+                </ol>
+                <p>Find the &quot;Add&quot; drop down at bottom of the Page Meta &amp; SEO panel. It has some preconfigured <code>&lt;meta /&gt;</code> fields along with &quot;Custom&quot; option.
+                Preconfigured <code>&lt;meta /&gt;</code> fields add known meta tags like <code>title</code>, <code>description</code>, <code>keywords</code>, etc to page. If any field is not listed, use the &quot;Custom&quot; option to add a new field.</p>
+                <p><img src="/page-seo/assets/seo-add.webp" alt="Add Meta Field"></p>
+                <p>It makes sense for certain fields to be duplicated for same page e.g. <code>Favicon</code> but not others e.g. <code>Title</code>, <code>Description</code> or <code>Canonical URL</code>.</p>
+                <ol>
+                <li>Entering Values into the New Field</li>
+                </ol>
+                <p>Every meta item has one or more input field corresponding to an attribute of <code>&lt;meta /&gt;</code> tag. Enter the appropriate values for the field. Make sure the values meet any specific requirements or character limits defined by your overall SEO strategy.</p>
+                <p><img src="/page-seo/assets/seo-static-values.webp" alt="Meta Field Static values"></p>
+                <p>These input fields support both static and dynamic values. For dynamic values, use the <code>{{ }}</code> syntax to reference a variable or a function.
+                For pages such as <code>index</code> or <code>404</code> page may require static values since they stay constant but for dynamic pages generated for every collection, it makes more sense to have dynamic values. Use the data panel from right hand side to easily copy a data variable.</p>
+                <p><img src="/page-seo/assets/seo-dynamic-values.webp" alt="Meta Field Dynamic values"></p>
+                <ol>
+                <li>Custom Meta fields</li>
+                </ol>
+                <p>To add custom <code>&lt;meta /&gt;</code> fields, select the &quot;Custom&quot; option from the &quot;Add&quot; dropdown. This will add a new field to the form where you can enter the name of the meta tag and its content. This field also support static and dynamic values.</p>
+                <p><img src="/page-seo/assets/seo-custom-static.webp" alt="Meta Custom Field Static value"></p>
+                <p>For dynamic values,</p>
+                <ul>
+                <li>it is possible to add these values for attributes such as
+                <img src="/page-seo/assets/seo-custom-dynamic-1.webp" alt="Meta Custom Field Dynamic attributes"></li>
+                <li><p>or add complete <code>&lt;meta /&gt;</code> tag as dynamic value.
+                <img src="/page-seo/assets/seo-custom-dynamic-2.webp" alt="Meta Custom Field Dynamic value"></p>
+                </li>
+                <li><p>Ordering Meta Fields</p>
+                </li>
+                </ul>
+                <p>Certain meta tags such as stylesheets, scripts, etc. need to be ordered in a specific way. To reorder the meta fields, click the arrow buttons on left side of the field to move it up or down in the list. This provides precise control over the order of the meta tags and ensures that they are rendered correctly in the page’s HTML.</p>
+                <p>Note: The order of meta tags can affect the page’s performance and SEO, so it is important to arrange them properly. This can also affect page is rendered when custom stylesheets are provided.</p>
+                <ol>
+                <li>Removing a Field</li>
+                </ol>
+                <p>Click the cross button on right side of the field to remove it from the list. This will delete the field and its content from the page’s meta data.</p>
+            </article>
+        </main>
+        <footer>
+            <section>
+                <h2 style="margin: 0; padding: 0;"><span style="font-family: Lora;">Kriti/ </span>Directory</h2>
+                <small>Engineered by Vinay</small>
+            </section>
+            <section style="display: flex; flex-flow: column; gap: 12px;">
+                <h3>Product</h3>
+                <p><a href="#pricing">Pricing</a></p>
+                <p><a href="/privacy-policy.html" target="_blank">Privacy Policy</a></p>
+                <p><a href="/terms-of-service.html" target="_blank">Terms of Service</a></p>
+                <p><a href="/refund-policy.html" target="_blank">Refund Policy</a></p>
+            </section>
+            <section style="display: flex; flex-flow: column; gap: 12px;">
+                <h3>Contact</h3>
+                <a href="mailto:vinay.gaykar+kriti_dir@proton.me">Email</a>
+                <a href="https://x.com/vinay_gaykar">X (twitter)</p>
+            </section>
+        </footer>
+    </body>
+</html>
