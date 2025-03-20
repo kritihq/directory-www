@@ -24,37 +24,37 @@
                 <h1 id="page-metadata-seo">Page Metadata &amp; SEO</h1>
                 <p>This documentation explains how to add page meta data in your application using the built-in &quot;Page Meta &amp; SEO&quot; panel. The panel provides an easy way to manage meta data fields to improve your page’s SEO. Follow the instructions below to add new meta data fields and input the necessary information.</p>
                 <video controls width="100%">
-                  <source src="/page-seo/seo-demo.webm" type="video/webm" />
+                  <source src="/assets/docs/page-seo/seo-demo.webm" type="video/webm" />
                 </video>
 
                 <h2 id="adding-metadata">Adding Metadata</h2>
                 <ol>
                 <li><p>Accessing the &quot;Page Meta &amp; SEO&quot; Panel</p>
                 <p>Locate and click the accordian &quot;Page Meta &amp; SEO&quot; on top left corner below page selector. Clicking on it will expand the section to reveal the meta data form.</p>
-                <p><img src="/page-seo/seo-locate-panel.gif" alt="Page Meta &amp; SEO Panel"></p>
+                <p><img src="/assets/docs/page-seo/seo-locate-panel.gif" alt="Page Meta &amp; SEO Panel"></p>
                 </li>
                 <li><p>Adding a New Field</p>
                 <p>Find the &quot;Add&quot; drop down at bottom of the Page Meta &amp; SEO panel. It has some preconfigured <code>&lt;meta /&gt;</code> fields along with &quot;Custom&quot; option.
                 Preconfigured <code>&lt;meta /&gt;</code> fields add known meta tags like <code>title</code>, <code>description</code>, <code>keywords</code>, etc to page. If any field is not listed, use the &quot;Custom&quot; option to add a new field.</p>
-                <p><img src="/page-seo/seo-add.png" alt="Add Meta Field"></p>
+                <p><img src="/assets/docs/page-seo/seo-add.png" alt="Add Meta Field"></p>
                 <p>It makes sense for certain fields to be duplicated for same page e.g. <code>Favicon</code> but not others e.g. <code>Title</code>, <code>Description</code> or <code>Canonical URL</code>.</p>
                 </li>
                 <li><p>Entering Values into the New Field</p>
                 <p>Every meta item has one or more input field corresponding to an attribute of <code>&lt;meta /&gt;</code> tag. Enter the appropriate values for the field. Make sure the values meet any specific requirements or character limits defined by your overall SEO strategy.</p>
-                <p><img src="/page-seo/seo-static-values.webp" alt="Meta Field Static values"></p>
+                <p><img src="/assets/docs/page-seo/seo-static-values.webp" alt="Meta Field Static values"></p>
                 <p>These input fields support both static and dynamic values. For dynamic values, use the <code>{{ }}</code> syntax to reference a variable or a function.
                 For pages such as <code>index</code> or <code>404</code> page may require static values since they stay constant but for dynamic pages generated for every collection, it makes more sense to have dynamic values. Use the data panel from right hand side to easily copy a data variable.</p>
-                <p><img src="/page-seo/seo-dynamic-values.webp" alt="Meta Field Dynamic values"></p>
+                <p><img src="/assets/docs/page-seo/seo-dynamic-values.webp" alt="Meta Field Dynamic values"></p>
                 </li>
                 <li><p>Custom Meta fields</p>
                 <p>To add custom <code>&lt;meta /&gt;</code> fields, select the &quot;Custom&quot; option from the &quot;Add&quot; dropdown. This will add a new field to the form where you can enter the name of the meta tag and its content. This field also support static and dynamic values.</p>
-                <p><img src="/page-seo/seo-custom-static.webp" alt="Meta Custom Field Static value"></p>
+                <p><img src="/assets/docs/page-seo/seo-custom-static.webp" alt="Meta Custom Field Static value"></p>
                 <p>For dynamic values,</p>
                 <ul>
                 <li>it is possible to add these values for attributes such as
-                <img src="/page-seo/seo-custom-dynamic-1.webp" alt="Meta Custom Field Dynamic attributes"></li>
+                <img src="/assets/docs/page-seo/seo-custom-dynamic-1.webp" alt="Meta Custom Field Dynamic attributes"></li>
                 <li>or add complete <code>&lt;meta /&gt;</code> tag as dynamic value.
-                <img src="/page-seo/seo-custom-dynamic-2.webp" alt="Meta Custom Field Dynamic value"></li>
+                <img src="/assets/docs/page-seo/seo-custom-dynamic-2.webp" alt="Meta Custom Field Dynamic value"></li>
                 </ul>
                 </li>
                 <li><p>Ordering Meta Fields</p>
