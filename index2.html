@@ -18,14 +18,25 @@
             h2 {
                 font-family: "Bricolage Grotesque", sans-serif;
             }
+            .zig-zag-line {
+                display: inline-grid;
+                place-content: center;
+                width: 100vw;
+                aspect-ratio: 1;
+                border: none;
+                height: 20px;
+                -webkit-mask: conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/20px 100%;
+                mask: conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/20px 100%;
+                background: var(--color-zinc-200);
+            }
         </style>
         <link href="/output.css" rel="stylesheet" />
     </head>
     <body class="bg-zinc-200">
         <header
-            class="w-3/4 mx-auto bg-zinc-100 border-x border-zinc-400/40 sticky top-0 border-b border-b-blue-400/40"
+            class="w-3/4 w-max-[1080px] max-sm:w-[96%] mx-auto bg-zinc-100 border-x border-zinc-400/40 sticky top-0 z-99"
         >
-            <nav class="mx-auto px-12 py-4 flex justify-between">
+            <nav class="mx-auto px-12 py-4 flex justify-between items-center">
                 <p>
                     <a href="/">
                         <span style="font-family: Lora">Kriti/ </span>Directory
@@ -33,17 +44,18 @@
                 </p>
                 <a
                     href="https://dashboard.kriti.directory/auth"
+                    target="_blank"
                     class="min-w-[100px] bg-blue-600 border border-blue-700 px-4 py-1 rounded-md text-slate-50 hover:bg-blue-800 text-sm text-center"
                 >
                     Login
                 </a>
             </nav>
         </header>
-        <main class="w-3/4 mx-auto">
+        <main class="w-3/4 w-max-[1080px] max-sm:w-[96%] mx-auto">
             <section
-                class="p-2 text-center border-b border-b-blue-400/40 text-sm text-blue-600 bg-linear-to-r from-blue-100/20 via-blue-200/40 to--blue-200/20 border-x border-zinc-400/40"
+                class="w-full absolute left-0 px-[10%] max-sm:px-0 text-center border border-blue-400/40 text-sm text-blue-600 bg-transparent"
             >
-                <p>
+                <p class="p-2 bg-linear-to-r from-blue-100/20 via-blue-200/40 to--blue-200/20">
                     Introducing:
                     <span class="font-semibold">
                         (pSEO) Dynamic Meta Tags
@@ -51,17 +63,17 @@
                 </p>
             </section>
             <section
-                class="bg-zinc-100 pt-8 pb-24 text-center borer-x border-zinc-400/40 rounded-b-md"
+                class="bg-zinc-100 pt-24 pb-24 max-sm:px-4 text-center borer-x border-zinc-400/40 rounded-b-md"
             >
-                <h1 class="text-5xl text-blue-600 mt-24">
+                <h1 class="text-5xl max-sm:text-3xl text-balance text-blue-600">
                     Publish directories from Excel<br />no code & in minutes
                 </h1>
-                <p class="w-1/3 mx-auto mt-6 mb-6 text-slate-700 text-base">
+                <p class="w-1/3 max-sm:w-full mx-auto mt-6 mb-6 text-slate-700 text-base">
                     Kriti is simple drag and drop directory builder with endless
                     design customization & focus on SEO paired with speed
                 </p>
                 <div
-                    class="w-1/4 mb-24 mx-auto flex justify-start items-center gap-8"
+                    class="w-1/4 max-sm:w-[90%] mb-24 mx-auto flex justify-start items-center gap-8"
                 >
                     <button
                         class="bg-blue-700 border border-blue-700 px-4 py-1 rounded-md text-slate-50 hover:bg-blue-800 text-sm"
@@ -71,12 +83,12 @@
                     <p class="text-slate-500 text-sm">7 days free trial</p>
                 </div>
                 <div
-                    class="w-[80%] mx-auto border border-zinc-400/40 rounded-md"
+                    class="w-[80%] max-sm:w-[90%] mx-auto border border-zinc-400/40 rounded-md flex flex-col max-sm:flex-col-reverse gap-4"
                 >
                     <ul
-                        class="grid grid-cols-4 items-start text-start gap-4 p-4 border-b border-blue-400/40"
+                        class="p-4 text-start grid grid-cols-4 items-start gap-4 max-sm:grid-cols-1 border-b max-sm:border-b-0 border-blue-400/40 max-sm:border-t"
                     >
-                        <li class="border-r border-r-blue-400/40 h-full">
+                        <li class="p-2 border-r border-blue-400/40 max-sm:border-r-0 max-sm:border-b h-full">
                             <h2
                                 class="text-lg text-slate-900 mb-2 flex items-center justify-start gap-2"
                             >
@@ -108,7 +120,7 @@
                                 directory your way
                             </p>
                         </li>
-                        <li class="border-r border-r-blue-400/40 h-full">
+                        <li class="p-2 border-r border-blue-400/40 max-sm:border-r-0 max-sm:border-b h-full">
                             <h2
                                 class="text-lg text-slate-900 mb-2 flex items-center justify-start gap-2"
                             >
@@ -134,7 +146,7 @@
                                 managed from excel & auto generate sitemap
                             </p>
                         </li>
-                        <li class="border-r border-r-blue-400/40 h-full">
+                        <li class="p-2 border-r border-blue-400/40 max-sm:border-r-0 max-sm:border-b h-full">
                             <h2
                                 class="text-lg text-slate-900 mb-2 flex items-center justify-start gap-2"
                             >
@@ -159,7 +171,7 @@
                                 Made to serve many dynamic pages quickly
                             </p>
                         </li>
-                        <li class="h-full">
+                        <li class="p-2 h-full">
                             <h2
                                 class="text-lg text-slate-900 mb-2 flex items-center justify-start gap-2"
                             >
@@ -192,44 +204,44 @@
                     <video
                         controls
                         controlslist="nodownload disablepictureinpicture"
-                        class="w-[90%] mx-auto mt-6 rounded-md"
+                        class="w-[90%] mx-auto rounded-md basis-full"
                     >
                         <source src="/assets/demo2.webm" type="video/webm" />
                     </video>
-                    <small class="text-zinc-600 my-4 block">
+                    <small class="text-zinc-600 mb-4 max-sm:mt-4 max-sm:mb-0 block">
                         A quick preview of what's possible
                     </small>
                 </div>
             </section>
-            <hr class="h-6 bg-zinc-200 border-0" />
+            <hr class="h-6 w-[100vw] absolute left-0 bg-zinc-200 border-y border-zinc-400/40" />
             <section
-                class="bg-zinc-100 px-12 pt-4 pb-24 text-start borer-x border-zinc-400/40 rounded-md"
+                class="bg-zinc-100 px-12 pt-4 pb-24 max-sm:px-4 text-start borer-x border-zinc-400/40 rounded-md"
             >
                 <h2 class="text-3xl text-blue-600 mt-12">
                     Hassle Free Hosting
                 </h2>
-                <p class="w-1/2 mt-6 mb-6 text-slate-700 text-base">
+                <p class="w-1/2 max-sm:w-full mt-6 mb-6 text-slate-700 text-base">
                     This ain't your regular Wordpress site. We designed Kriti
                     Directory to make it easy to publish directory. All features
                     are built precisely around this ideology.
                 </p>
-                <div class="w-1/2 mb-24 flex justify-start items-center gap-8">
+                <div class="w-1/2 max-sm:w-full mb-24 flex justify-start items-center gap-8">
                     <button
-                        class="bg-blue-700 border border-blue-700 px-4 py-1 rounded-md text-slate-50 hover:bg-blue-800 text-sm"
+                        class="bg-blue-700 border border-blue-700 px-4 py-1 rounded-md text-slate-50 hover:bg-blue-800 text-sm max-sm:basis-1/2"
                     >
                         Host directory
                     </button>
-                    <p class="text-slate-500 text-sm">
+                    <p class="text-slate-500 text-sm text-balance">
                         &larr; Start your hosting journey right now
                     </p>
                 </div>
-                <div class="flex gap-8 mx-auto w-[90%] h-[40vh]">
+                <div class="mx-auto w-[90%] max-sm:w-full min-h-[40vh] max-sm:h-fit flex gap-8 max-sm:flex-col-reverse">
                     <div
                         id="feature_buttons"
-                        class="flex-1/2 shrink-0 grow-0 grid grid-rows-4 gap-4"
+                        class="px-2 max-sm:px-4 py-2 max-sm:w-full max-sm:overflow-x-scroll flex-1/2 shrink-0 grow-0 grid grid-rows-4 max-sm:flex gap-4"
                     >
                         <button
-                            class="text-start px-4 py-2 border border-blue-400/40 rounded-sm data-[selected]:shadow-blue-600/10 data-[selected]:shadow-[6px_6px_0px_0px] data-[selected]:-translate-2 hover:bg-zinc-200/10"
+                            class="text-start px-4 py-2 max-sm:flex-[0_0_75%] border border-blue-400/40 rounded-sm data-[selected]:shadow-blue-600/10 data-[selected]:shadow-[6px_6px_0px_0px] data-[selected]:-translate-2 hover:bg-zinc-200/10"
                             onclick="onFeatureClick(event)"
                             data-selected
                             data-source="/assets/spreadsheets.webp"
@@ -246,7 +258,7 @@
                             </p>
                         </button>
                         <button
-                            class="text-start px-4 py-2 border border-blue-400/40 rounded-sm data-[selected]:shadow-blue-600/10 data-[selected]:shadow-[6px_6px_0px_0px] data-[selected]:-translate-2 hover:bg-zinc-200/10"
+                            class="text-start px-4 py-2 max-sm:flex-[0_0_75%] border border-blue-400/40 rounded-sm data-[selected]:shadow-blue-600/10 data-[selected]:shadow-[6px_6px_0px_0px] data-[selected]:-translate-2 hover:bg-zinc-200/10"
                             onclick="onFeatureClick(event)"
                             data-source="/assets/performance.png"
                         >
@@ -261,7 +273,7 @@
                             </p>
                         </button>
                         <button
-                            class="text-start px-4 py-2 border border-blue-400/40 rounded-sm data-[selected]:shadow-blue-600/10 data-[selected]:shadow-[6px_6px_0px_0px] data-[selected]:-translate-2 hover:bg-zinc-200/10"
+                            class="text-start px-4 py-2 max-sm:flex-[0_0_75%] border border-blue-400/40 rounded-sm data-[selected]:shadow-blue-600/10 data-[selected]:shadow-[6px_6px_0px_0px] data-[selected]:-translate-2 hover:bg-zinc-200/10"
                             onclick="onFeatureClick(event)"
                             data-source="/assets/design-with-intention.png"
                         >
@@ -276,7 +288,7 @@
                             </p>
                         </button>
                         <button
-                            class="text-start px-4 py-2 border border-blue-400/40 rounded-sm data-[selected]:shadow-blue-600/10 data-[selected]:shadow-[6px_6px_0px_0px] data-[selected]:-translate-2 hover:bg-zinc-200/10"
+                            class="text-start px-4 py-2 max-sm:flex-[0_0_75%] border border-blue-400/40 rounded-sm data-[selected]:shadow-blue-600/10 data-[selected]:shadow-[6px_6px_0px_0px] data-[selected]:-translate-2 hover:bg-zinc-200/10"
                             onclick="onFeatureClick(event)"
                             data-source="/assets/performance.png"
                         >
@@ -310,7 +322,7 @@
                 <h3 class="w-[90%] mx-auto mt-12 mb-8 text-sm italic">
                     The list goes on ...
                 </h3>
-                <ul class="mx-auto w-[90%] grid grid-cols-4 grid-rows-2">
+                <ul class="mx-auto w-[90%] max-sm:w-full grid grid-cols-4 grid-rows-2 max-sm:grid-cols-2">
                     <li
                         class="p-4 border-r border-r-zinc-400/40 border-b border-b-zinc-400/40"
                     >
@@ -362,14 +374,15 @@
                     </li>
                 </ul>
             </section>
-            <hr class="h-6 bg-zinc-200 border-0" />
+            <hr class="h-6 w-[100vw] absolute left-0 bg-zinc-200 border-y border-zinc-400/40" />
             <section
-                class="bg-zinc-100 px-12 pt-4 pb-24 text-start borer-x border-zinc-400/40 rounded-md"
+                id="pricing"
+                class="bg-zinc-100 px-12 max-sm:px-4 pt-4 pb-24 text-start borer-x border-zinc-400/40 rounded-md"
             >
                 <h2 class="text-3xl text-blue-600 mt-12">
                     Transparent Pricing
                 </h2>
-                <p class="w-1/2 mt-6 mb-6 text-slate-700 text-base">
+                <p class="w-1/2 max-sm:w-full mt-6 mb-6 text-slate-700 text-base">
                     No hidden cost (we hate that sh*t).
                 </p>
                 <div
@@ -416,12 +429,12 @@
                     </li>
                 </ul>
             </section>
-            <hr class="h-6 bg-zinc-200 border-0" />
+            <hr class="h-6 w-[100vw] absolute left-0 bg-zinc-200 border-y border-zinc-400/40" />
             <section
-                class="bg-zinc-100 px-12 pt-4 pb-24 text-start borer-x border-zinc-400/40 rounded-md"
+                class="bg-zinc-100 px-12 max-sm:px-4 pt-4 pb-24 text-start borer-x border-zinc-400/40 rounded-md"
             >
                 <h2 class="text-3xl text-blue-600 mt-12">FAQs</h2>
-                <p class="w-1/2 mt-6 mb-6 text-slate-700 text-base">
+                <p class="w-1/2 max-sm:w-full mt-6 mb-6 text-slate-700 text-base">
                     Tried my best to guess your questions. Missed some?
                     <a
                         href="mailto:vinay.gaykar@proton.me"
@@ -491,44 +504,53 @@
                     </details>
                 </div>
             </section>
-            <hr class="h-6 bg-zinc-200 border-0" />
+            <hr class="h-6 w-[100vw] absolute left-0 bg-zinc-200 border-y border-zinc-400/40" />
             <section
-                class="px-12 pt-4 pb-24 text-center borer-x border-zinc-400/40 rounded-md"
+                class="px-12 max-sm:px-4 py-24 max-sm:pb-8 text-center border-x border-blue-400/40"
             >
-                <h2 class="text-3xl text-blue-600/70 mt-12">
+                <h2 class="text-3xl text-blue-600/70 text-wrap max-sm:text-start">
                     Ready to publish with
                     <span class="text-blue-600">Kriti/ Directory</span>?
                 </h2>
-                <p class="mt-6 mb-6 text-center text-slate-700 text-base">
+                <p class="mt-6 mb-6 text-center text-slate-700 text-base max-sm:text-start">
                     I'll get the server up and running if you have excel file at
                     ready.
                 </p>
-                <div class="my-12 flex gap-8 justify-center items-center">
+                <div class="my-12 max-sm:my-6 flex gap-8 justify-center items-center">
                     <button
                         class="bg-blue-700 border border-blue-700 px-4 py-1 rounded-md text-slate-50 hover:bg-blue-800 text-sm"
                     >
                         Shut up and take my excel
                     </button>
-                    <p class="text-start text-sm text-slate-500">
+                    <p class="text-start text-sm text-slate-500 text-balance">
                         &larr; Is what you'll say after singing up <br />(if
                         haven't already)
                     </p>
                 </div>
             </section>
-            <hr class="h-6 bg-zinc-200 border-0" />
         </main>
-        <footer class="w-full bg-blue-500">
+        <footer class="w-full bg-blue-700">
+            <hr class="zig-zag-line"></hr>
             <div
-                class="w-3/4 mx-auto px-8 py-12 flex gap-12 justify-between items-start text-slate-50 border-x border-x-blue-400"
+                class="w-3/4 w-max-[1080px] max-sm:w-[96%] mx-auto px-8 max-sm:px-4 py-12 text-slate-50 border-x border-x-blue-600/70 grid grid-cols-3 max-sm:grid-cols-1 gap-12 justify-between items-start"
             >
-                <section>
-                    <h3 class="text-3xl" style="font-family: Lora">
-                        Kriti/ Directory
+                <section class="h-full">
+                    <h3 class="text-3xl">
+                        <span style="font-family: Lora;">Kriti/</span> Directory
                     </h3>
-                    <p class="mt-4 text-sm">No code directory builder</p>
+                    <p class="mt-4 text-xs">No code directory builder</p>
                 </section>
-                <section>
-                    <p class="text-lg">Resources</p>
+                <section class="h-full px-4 flex flex-col gap-2 text-sm border-l border-l-blue-600/70 max-sm:border-l-0 text-slate-100/70">
+                  <h3 class="text-lg mb-4">Resources</h3>
+                  <p><a href="#pricing" class="hover:italic">Pricing</a></p>
+                  <p><a href="/privacy-policy.html" target="_blank" class="hover:italic">Privacy Policy</a></p>
+                  <p><a href="/terms-of-service.html" target="_blank" class="hover:italic">Terms of Service</a></p>
+                  <p><a href="/refund-policy.html" target="_blank" class="hover:italic">Refund Policy</a></p>
+                </section>
+                <section class="h-full px-4 flex flex-col gap-2 text-sm border-l border-l-blue-600/70 max-sm:border-l-0 text-slate-100/70">
+                  <h3 class="text-lg mb-4">Contact</h3>
+                  <a href="mailto:vinay.gaykar+kriti_dir@proton.me" class="hover:italic">Email</a>
+                  <a href="https://x.com/vinay_gaykar" class="hover:italic">X (twitter)</a>
                 </section>
             </div>
         </footer>
