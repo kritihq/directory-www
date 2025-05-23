@@ -21,55 +21,42 @@
         </header>
         <main>
             <article>
-                <h1 id="setting-up-your-dns-records">Setting Up Your DNS Records</h1>
-                <p>After clicking &quot;Go Live&quot; on your dashboard, you&#39;ll need to point your domain to your new server. Here&#39;s how to get your IP address and update your DNS records.</p>
-                <h2 id="getting-your-ip-address">Getting Your IP Address</h2>
+                <h1 id="deploying-your-directory">Deploying your directory</h1>
+                <h2 id="go-live">Go Live</h2>
+                <p>Its as easy as clicking the &quot;Go Live&quot; button.</p>
+                <h3 id="steps">Steps</h3>
                 <ol>
-                <li>Click the <strong>&quot;View DNS&quot;</strong> button on your directory card</li>
-                <li>Copy the IP address shown</li>
-                <li>Keep this handy - you&#39;ll need it for the next steps</li>
+                <li><p>Create <a href="/docs/new-directory">new directory</a>
+                A new card will be visible on dashboard with label &quot;New Directory&quot;.</p>
+                <p><img src="/assets/go-live-and-update/directory-card-1.png" alt="New Directory"></p>
+                </li>
+                <li><p><a href="/docs/studio">Edit the design</a> &amp; <a href="/docs/page-seo">pSEO</a> is configured for the pages
+                The &quot;Go Live&quot; button on the card should be enabled now</p>
+                <p><img src="/assets/go-live-and-update/directory-card-2.png" alt="Go Live"></p>
+                </li>
+                <li><p>Click &quot;Go Live&quot; &amp; wait till server is provisined usually takes a minute or two</p>
+                </li>
+                <li><p><a href="/docs/update-dns">Update DNS records</a> with your domain provider</p>
+                </li>
+                <li><p>Done</p>
+                </li>
                 </ol>
-                <h2 id="updating-dns-records-by-provider">Updating DNS Records by Provider</h2>
-                <h3 id="godaddy">GoDaddy</h3>
+                <h2 id="update">Update</h2>
+                <p>After deploying the directory, incase there are any changes to design or data, the update option is always available.</p>
+                <h3 id="steps">Steps</h3>
                 <ol>
-                <li>Log into your GoDaddy account</li>
-                <li>Go to <strong>My Products</strong> &gt; <strong>DNS</strong></li>
-                <li>Find your domain and click <strong>Manage</strong></li>
-                <li>Look for the <strong>A Record</strong> with &quot;@&quot; or your domain name</li>
-                <li>Click the pencil icon to edit</li>
-                <li>Replace the old IP with your new IP address</li>
-                <li>Click <strong>Save</strong></li>
+                <li><p>Click the &quot;Edit&quot; button on directory card on dashboard</p>
+                </li>
+                <li><p>Make required design changes or upload new data file and save changes</p>
+                </li>
+                <li><p>The directory card should show &quot;Update Available&quot;
+                <img src="/assets/go-live-and-update/directory-card-3.png" alt="Update Available"></p>
+                </li>
+                <li><p>Click the &quot;Update&quot; button</p>
+                </li>
+                <li><p>Done</p>
+                </li>
                 </ol>
-                <p>Changes take 1-24 hours to work everywhere.</p>
-                <p><a href="https://support.learnworlds.com/support/solutions/articles/12000001358-how-to-connect-your-naked-domain-without-www-#A-Record">Reference</a></p>
-                <h3 id="cloudflare">Cloudflare</h3>
-                <ol>
-                <li>Log into Cloudflare</li>
-                <li>Select your domain from the list</li>
-                <li>Click the <strong>DNS</strong> tab</li>
-                <li>Find the <strong>A Record</strong> pointing to your domain</li>
-                <li>Click <strong>Edit</strong></li>
-                <li>Update the IPv4 address field with your new IP</li>
-                <li>Click <strong>Save</strong></li>
-                </ol>
-                <p>Updates usually happen within minutes.</p>
-                <p><a href="https://www.namecheap.com/support/knowledgebase/article.aspx/319/2237/how-can-i-set-up-an-a-address-record-for-my-domain/">Reference</a></p>
-                <h3 id="namecheap">Namecheap</h3>
-                <ol>
-                <li>Sign into your Namecheap account</li>
-                <li>Go to <strong>Domain List</strong> and click <strong>Manage</strong> next to your domain</li>
-                <li>Click <strong>Advanced DNS</strong></li>
-                <li>Find the <strong>A Record</strong> with &quot;@&quot; as the host</li>
-                <li>Click the edit icon</li>
-                <li>Change the value to your new IP address</li>
-                <li>Click the green checkmark to save</li>
-                </ol>
-                <p>Your site should be live within 30 minutes to 24 hours.</p>
-                <p><a href="https://www.namecheap.com/support/knowledgebase/article.aspx/319/2237/how-can-i-set-up-an-a-address-record-for-my-domain/">Reference</a></p>
-                <h3 id="other-providers">Other Providers</h3>
-                <p><a href="https://kb.porkbun.com/article/68-how-to-edit-dns-records">Porkbun</a></p>
-                <h2 id="need-help-">Need Help?</h2>
-                <p>If your site isn&#39;t working after 24 hours, double-check that you copied the IP address correctly from your dashboard.</p>
            </article>
         </main>
         <footer>
