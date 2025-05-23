@@ -1,0 +1,203 @@
+<!doctype html>
+<html
+    lang="en-us"
+    dir="ltr"
+>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Deploying your directory | My New Hugo Site</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+    rel="stylesheet"
+/>
+<style>
+    body {
+        font-family: "Inter", serif;
+    }
+    h1,
+    h2 {
+        font-family: "Bricolage Grotesque", sans-serif;
+    }
+    .zig-zag-line {
+        display: inline-grid;
+        place-content: center;
+        width: 100vw;
+        aspect-ratio: 1;
+        border: none;
+        height: 20px;
+        -webkit-mask: conic-gradient(
+                from -45deg at bottom,
+                #0000,
+                #000 1deg 89deg,
+                #0000 90deg
+            )
+            50%/20px 100%;
+        mask: conic-gradient(
+                from -45deg at bottom,
+                #0000,
+                #000 1deg 89deg,
+                #0000 90deg
+            )
+            50%/20px 100%;
+        background: var(--color-zinc-200);
+    }
+</style>
+<link rel="stylesheet" href="/css/output.css" />
+
+
+      <script src="/js/main.js"></script>
+
+
+    </head>
+    <body class="bg-zinc-200">
+        <header
+    class="w-3/4 w-max-[1080px] max-sm:w-[96%] mx-auto bg-zinc-200 sticky top-0 z-99"
+>
+    <nav class="mx-auto px-12 py-4 flex justify-between items-center">
+        <p>
+            <a href="/">
+                <span style="font-family: Lora">Kriti/ </span>Directory
+            </a>
+        </p>
+        <a
+            href="https://dashboard.kriti.directory/auth"
+            target="_blank"
+            class="min-w-[100px] bg-blue-600 border border-blue-700 px-4 py-1 rounded-md text-slate-50 hover:bg-blue-800 text-sm text-center"
+        >
+            Login
+        </a>
+    </nav>
+</header>
+ 
+<main
+    class="w-3/4 w-max-[1080px] max-sm:w-[96%] mx-auto py-8 px-8 max-sm:px-2 grid grid-cols-[15%_1fr]"
+>
+    <nav aria-label="breadcrumbs" class="px-2 py-2 col-start-2 col-end-4">
+        <ul id="breadcrumbs">
+            <li><a href="/docs/">Docs</a></li>
+            <li class="text-slate-500">Deploying your directory</li>
+        </ul>
+    </nav>
+    <aside class="px-4">
+        <p class="text-sm uppercase text-blue-600">Quick Navigate</p>
+        <nav aria-label="quick links">
+            <ul>
+                <li>Something1</li>
+                <li>Something1</li>
+                <li>Something1</li>
+                <li>Something1</li>
+                <li>Something1</li>
+                <li>Something1</li>
+                <li>Something1</li>
+                <li>Something1</li>
+                <li>Something1</li>
+                <li>Something1</li>
+                <li>Something1</li>
+            </ul>
+        </nav>
+    </aside>
+    <article class="bg-zinc-100 rounded-md grid grid-cols-[1fr_25%]">
+        <h1 class="p-8 col-start-1 col-end-3">Deploying your directory</h1>
+        <aside
+            class="p-8 sticky top-4 col-start-2 border-l border-l-zinc-500/20"
+        >
+            <p class="my-4 text-sm text-blue-500 uppercase">On this page</p>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#go-live">Go Live</a>
+      <ul>
+        <li><a href="#steps">Steps</a></li>
+      </ul>
+    </li>
+    <li><a href="#update">Update</a>
+      <ul>
+        <li><a href="#steps-1">Steps</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </aside>
+        <section
+            id="content"
+            class="w-max-[75%] max-sm:px-4 p-8 borer-x border-zinc-400/40 rounded-b-md text-pretty col-start-1 row-start-2"
+        >
+            <h2 id="go-live">Go Live</h2>
+<p>Its as easy as clicking the &ldquo;Go Live&rdquo; button.</p>
+<h3 id="steps">Steps</h3>
+<ol>
+<li>Create <a href="/docs/new-directory">new directory</a>
+A new card will be visible on dashboard with label &ldquo;New Directory&rdquo;.</li>
+</ol>
+<p><img src="/assets/go-live-and-update/directory-card-1.png" alt="New Directory"></p>
+<ol start="2">
+<li><a href="/docs/studio">Edit the design</a> &amp; <a href="/docs/page-seo">pSEO</a> is configured for the pages
+The &ldquo;Go Live&rdquo; button on the card should be enabled now</li>
+</ol>
+<p><img src="/assets/go-live-and-update/directory-card-2.png" alt="Go Live"></p>
+<ol start="3">
+<li>
+<p>Click &ldquo;Go Live&rdquo; &amp; wait till server is provisined usually takes a minute or two</p>
+</li>
+<li>
+<p><a href="/docs/update-dns">Update DNS records</a> with your domain provider</p>
+</li>
+<li>
+<p>Done</p>
+</li>
+</ol>
+<h2 id="update">Update</h2>
+<p>After deploying the directory, incase there are any changes to design or data, the update option is always available.</p>
+<h3 id="steps-1">Steps</h3>
+<ol>
+<li>
+<p>Click the &ldquo;Edit&rdquo; button on directory card on dashboard</p>
+</li>
+<li>
+<p>Make required design changes or upload new data file and save changes</p>
+</li>
+<li>
+<p>The directory card should show &ldquo;Update Available&rdquo;
+<img src="/assets/go-live-and-update/directory-card-3.png" alt="Update Available"></p>
+</li>
+<li>
+<p>Click the &ldquo;Update&rdquo; button</p>
+</li>
+<li>
+<p>Done</p>
+</li>
+</ol>
+
+        </section>
+    </article>
+</main>
+ <footer class="w-full bg-blue-700">
+    <hr class="zig-zag-line"></hr>
+    <div
+        class="w-3/4 w-max-[1080px] max-sm:w-[96%] mx-auto px-8 max-sm:px-4 py-12 text-slate-50 border-x border-x-blue-600/70 grid grid-cols-3 max-sm:grid-cols-1 gap-12 justify-between items-start"
+    >
+        <section class="h-full">
+            <h3 class="text-3xl">
+                <span style="font-family: Lora;">Kriti/</span> Directory
+            </h3>
+            <p class="mt-4 text-xs">No code directory builder</p>
+        </section>
+        <section class="h-full px-4 flex flex-col gap-2 text-sm border-l border-l-blue-600/70 max-sm:border-l-0 text-slate-100/70">
+            <h3 class="text-lg mb-4">Resources</h3>
+            <p><a href="#pricing" class="hover:italic">Pricing</a></p>
+            <p><a href="/privacy-policy.html" target="_blank" class="hover:italic">Privacy Policy</a></p>
+            <p><a href="/terms-of-service.html" target="_blank" class="hover:italic">Terms of Service</a></p>
+            <p><a href="/refund-policy.html" target="_blank" class="hover:italic">Refund Policy</a></p>
+        </section>
+        <section class="h-full px-4 flex flex-col gap-2 text-sm border-l border-l-blue-600/70 max-sm:border-l-0 text-slate-100/70">
+            <h3 class="text-lg mb-4">Contact</h3>
+            <a href="mailto:vinay.gaykar+kriti_dir@proton.me" class="hover:italic">Email</a>
+            <a href="https://x.com/vinay_gaykar" class="hover:italic">X (twitter)</a>
+        </section>
+    </div>
+</footer>
+
+    </body>
+</html>

@@ -1,0 +1,47 @@
+{{ define "main" }}
+<main
+    class="w-3/4 w-max-[1080px] max-sm:w-[96%] mx-auto py-8 px-8 max-sm:px-2 grid grid-cols-[15%_1fr]"
+>
+    <nav aria-label="breadcrumbs" class="px-2 py-2 col-start-2 col-end-4">
+        <ul id="breadcrumbs">
+            {{- range $k, $v := .Ancestors.Reverse }} {{- if (gt $k 0) }}
+            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+            {{- end }} {{- end }}
+            <li class="text-slate-500">{{ .LinkTitle }}</li>
+        </ul>
+    </nav>
+    <aside class="px-4">
+        <p class="text-sm uppercase text-blue-600">Quick Navigate</p>
+        <nav aria-label="quick links">
+            <ul>
+                <li>Something1</li>
+                <li>Something1</li>
+                <li>Something1</li>
+                <li>Something1</li>
+                <li>Something1</li>
+                <li>Something1</li>
+                <li>Something1</li>
+                <li>Something1</li>
+                <li>Something1</li>
+                <li>Something1</li>
+                <li>Something1</li>
+            </ul>
+        </nav>
+    </aside>
+    <article class="bg-zinc-100 rounded-md grid grid-cols-[1fr_25%]">
+        <h1 class="p-8 col-start-1 col-end-3">{{ .Title }}</h1>
+        <aside
+            class="p-8 sticky top-4 col-start-2 border-l border-l-zinc-500/20"
+        >
+            <p class="my-4 text-sm text-blue-500 uppercase">On this page</p>
+            {{ .TableOfContents }}
+        </aside>
+        <section
+            id="content"
+            class="w-max-[75%] max-sm:px-4 p-8 borer-x border-zinc-400/40 rounded-b-md text-pretty col-start-1 row-start-2"
+        >
+            {{ .Content }}
+        </section>
+    </article>
+</main>
+{{ end }}
