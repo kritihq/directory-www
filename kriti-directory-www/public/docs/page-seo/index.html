@@ -4,9 +4,11 @@
     dir="ltr"
 >
     <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-        <meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
-<title>Page Metadata &amp; SEO | My New Hugo Site</title>
+        <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    Page Metadata &amp; SEO | Kriti/ Directory
+</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
@@ -46,65 +48,142 @@
     }
 </style>
 <link rel="stylesheet" href="/css/output.css" />
-
-
-      <script src="/js/main.js"></script>
+ 
 
 
     </head>
-    <body class="bg-zinc-200">
+    <body
+        class="min-h-[100vh] bg-zinc-200 grid grid-rows-[min-content_1fr_auto] auto-cols-fr"
+    >
         <header
-    class="w-3/4 w-max-[1080px] max-sm:w-[96%] mx-auto bg-zinc-200 sticky top-0 z-99"
+    class="w-full bg-zinc-200 sticky top-0 z-99 border-b border-b-zinc-400/40"
 >
-    <nav class="mx-auto px-12 py-4 flex justify-between items-center">
+    <nav
+        class="w-3/4 w-max-[1080px] max-sm:w-[96%] mx-auto px-12 py-4 max-sm:px-2 flex justify-between items-center border-x border-x-zinc-400/20"
+    >
         <p>
             <a href="/">
                 <span style="font-family: Lora">Kriti/ </span>Directory
             </a>
         </p>
-        <a
-            href="https://dashboard.kriti.directory/auth"
-            target="_blank"
-            class="min-w-[100px] bg-blue-600 border border-blue-700 px-4 py-1 rounded-md text-slate-50 hover:bg-blue-800 text-sm text-center"
+        <nav
+            class="flex gap-4 max-sm:gap-1 items-center text-sm text-slate-600 text-center"
         >
-            Login
-        </a>
+            <a
+                href="/docs"
+                class="min-w-[100px] px-4 py-1 rounded-md hover:bg-zinc-300 hover:text-slate-900"
+            >
+                Docs
+            </a>
+            <a
+                href="https://dashboard.kriti.directory/auth"
+                target="_blank"
+                class="min-w-[100px] bg-blue-600 border border-blue-700 px-4 py-1 rounded-md text-slate-50 hover:bg-blue-800 text-sm text-center"
+            >
+                Login
+            </a>
+        </nav>
     </nav>
 </header>
  
 <main
-    class="w-3/4 w-max-[1080px] max-sm:w-[96%] mx-auto py-8 px-8 max-sm:px-2 grid grid-cols-[15%_1fr]"
+    class="w-3/4 w-max-[1080px] max-sm:w-[96%] mx-auto max-sm:px-0 grid grid-cols-[20%_1fr] max-sm:grid-cols-[1fr] border-x border-x-zinc-400/40 overflow-scroll"
 >
-    <nav aria-label="breadcrumbs" class="px-2 py-2 col-start-2 col-end-4">
+    <nav
+        aria-label="breadcrumbs"
+        class="px-2 py-2 max-sm:py-1 col-start-2 col-end-4 max-sm:col-start-1 max-sm:col-end-2 border-l border-zinc-400/20 max-sm:border-l-0"
+    >
         <ul id="breadcrumbs">
             <li><a href="/docs/">Docs</a></li>
-            <li class="text-slate-500">Page Metadata &amp; SEO</li>
+            <li class="text-slate-500 breadcrumb-curr">Page Metadata &amp; SEO</li>
         </ul>
     </nav>
-    <aside class="px-4">
-        <p class="text-sm uppercase text-blue-600">Quick Navigate</p>
+    <aside
+        id="section-links"
+        class="px-4 py-4 border-t border-t-zinc-400/20 max-sm:hidden"
+    >
         <nav aria-label="quick links">
+            <p class="mb-4 text-sm text-blue-600 uppercase">Documentation</p>
             <ul>
-                <li>Something1</li>
-                <li>Something1</li>
-                <li>Something1</li>
-                <li>Something1</li>
-                <li>Something1</li>
-                <li>Something1</li>
-                <li>Something1</li>
-                <li>Something1</li>
-                <li>Something1</li>
-                <li>Something1</li>
-                <li>Something1</li>
+                
+                
+                <li
+                    class="px-1 py-2 hover:bg-zinc-300 hover:p-2 animate-[slideUp_0.3s_ease-out_1_both]"
+                >
+                    <a
+                        href="http://localhost:1313/docs/data/"
+                        class="h-full w-full inline-block"
+                    >
+                        Data, Collections &amp; Records
+                    </a>
+                </li>
+                 
+                
+                <li
+                    class="px-1 py-2 hover:bg-zinc-300 hover:p-2 animate-[slideUp_0.3s_ease-out_1_both]"
+                >
+                    <a
+                        href="http://localhost:1313/docs/go-live-and-update/"
+                        class="h-full w-full inline-block"
+                    >
+                        Deploying Your Directory
+                    </a>
+                </li>
+                 
+                
+                <li
+                    class="px-1 py-2 hover:bg-zinc-300 hover:p-2 animate-[slideUp_0.3s_ease-out_1_both]"
+                >
+                    <a
+                        href="http://localhost:1313/docs/studio/studio/"
+                        class="h-full w-full inline-block"
+                    >
+                        Kriti Studio
+                    </a>
+                </li>
+                 
+                
+                <li
+                    class="px-1 py-2 hover:bg-zinc-300 hover:p-2 animate-[slideUp_0.3s_ease-out_1_both]"
+                >
+                    <a
+                        href="http://localhost:1313/docs/new-directory/"
+                        class="h-full w-full inline-block"
+                    >
+                        New Directory
+                    </a>
+                </li>
+                 
+                
+                <li
+                    class="bg-zinc-300 pl-4 py-2 border border-zinc-400 animate-[slideUp_0.3s_ease-out_1_both]"
+                >
+                    Page Metadata &amp; Seo
+                </li>
+                 
+                
+                <li
+                    class="px-1 py-2 hover:bg-zinc-300 hover:p-2 animate-[slideUp_0.3s_ease-out_1_both]"
+                >
+                    <a
+                        href="http://localhost:1313/docs/update-dns/"
+                        class="h-full w-full inline-block"
+                    >
+                        Setting Up Your DNS Records
+                    </a>
+                </li>
+                 
             </ul>
         </nav>
     </aside>
-    <article class="bg-zinc-100 rounded-md grid grid-cols-[1fr_25%]">
+    <article
+        class="bg-zinc-100 rounded-md grid grid-cols-[1fr_25%] max-sm:grid-cols-[1fr] border-t border-t-zinc-400/20"
+    >
         <h1 class="p-8 col-start-1 col-end-3">Page Metadata &amp; SEO</h1>
         <aside
-            class="p-8 sticky top-4 col-start-2 border-l border-l-zinc-500/20"
+            class="pl-6 py-8 sticky top-24 self-start col-start-2 max-sm:col-start-1 border-l border-zinc-400/40 max-sm:border-y max-sm:border-l-0"
         >
-            <p class="my-4 text-sm text-blue-500 uppercase">On this page</p>
+            <p class="mb-4 text-sm text-blue-500 uppercase">On this page</p>
             <nav id="TableOfContents">
   <ul>
     <li><a href="#adding-metadata">Adding Metadata</a></li>
@@ -113,25 +192,27 @@
         </aside>
         <section
             id="content"
-            class="w-max-[75%] max-sm:px-4 p-8 borer-x border-zinc-400/40 rounded-b-md text-pretty col-start-1 row-start-2"
+            class="w-max-[75%] max-sm:px-4 p-8 borer-x border-zinc-400/40 rounded-b-md text-balanced col-start-1 row-start-2 max-sm:row-start-3"
         >
             <p>This documentation explains how to add page meta data in your application using the built-in &ldquo;Page Meta &amp; SEO&rdquo; panel. The panel provides an easy way to manage meta data fields to improve your page’s SEO. Follow the instructions below to add new meta data fields and input the necessary information.</p>
-<!-- raw HTML omitted -->
+<video controls width="100%">
+  <source src="/assets/docs/page-seo/seo-demo.webm" type="video/webm" />
+</video>
 <h2 id="adding-metadata">Adding Metadata</h2>
 <ol>
 <li><strong>Accessing the &ldquo;Page Meta &amp; SEO&rdquo; Panel</strong></li>
 </ol>
 <p>Locate and click the accordian &ldquo;Page Meta &amp; SEO&rdquo; on top left corner below page selector. Clicking on it will expand the section to reveal the meta data form.</p>
 <p><img src="/assets/docs/page-seo/seo-locate-panel.gif" alt="Page Meta &amp; SEO Panel"></p>
-<!-- raw HTML omitted -->
+<br/>
 <ol start="2">
 <li><strong>Adding a New Field</strong></li>
 </ol>
 <p>Find the &ldquo;Add&rdquo; drop down at bottom of the Page Meta &amp; SEO panel. It has some preconfigured <code>&lt;meta /&gt;</code> fields along with &ldquo;Custom&rdquo; option.
 Preconfigured <code>&lt;meta /&gt;</code> fields add known meta tags like <code>title</code>, <code>description</code>, <code>keywords</code>, etc to page. If any field is not listed, use the &ldquo;Custom&rdquo; option to add a new field.</p>
-<!-- raw HTML omitted -->
+  <img src="/assets/docs/page-seo/seo-add.png" alt="Add Meta Field"  style="width: 400px; height: 400px;">
 <p>It makes sense for certain fields to be duplicated for same page e.g. <code>Favicon</code> but not others e.g. <code>Title</code>, <code>Description</code> or <code>Canonical URL</code>.</p>
-<!-- raw HTML omitted -->
+<br/>
 <ol start="3">
 <li><strong>Entering Values into the New Field</strong></li>
 </ol>
@@ -140,7 +221,7 @@ Preconfigured <code>&lt;meta /&gt;</code> fields add known meta tags like <code>
 <p>These input fields support both static and dynamic values. For dynamic values, use the <code>{{ }}</code> syntax to reference a variable or a function.
 For pages such as <code>index</code> or <code>404</code> page may require static values since they stay constant but for dynamic pages generated for every collection, it makes more sense to have dynamic values. Use the data panel from right hand side to easily copy a data variable.</p>
 <p><img src="/assets/docs/page-seo/seo-dynamic-values.webp" alt="Meta Field Dynamic values"></p>
-<!-- raw HTML omitted -->
+<br/>
 <ol start="4">
 <li><strong>Custom Meta fields</strong></li>
 </ol>
@@ -157,13 +238,13 @@ For pages such as <code>index</code> or <code>404</code> page may require static
 <img src="/assets/docs/page-seo/seo-custom-dynamic-2.webp" alt="Meta Custom Field Dynamic value"></p>
 </li>
 </ul>
-<!-- raw HTML omitted -->
+<br/>
 <ol start="5">
 <li><strong>Ordering Meta Fields</strong></li>
 </ol>
 <p>Certain meta tags such as stylesheets, scripts, etc. need to be ordered in a specific way. To reorder the meta fields, click the arrow buttons on left side of the field to move it up or down in the list. This provides precise control over the order of the meta tags and ensures that they are rendered correctly in the page’s HTML.</p>
 <p>Note: The order of meta tags can affect the page’s performance and SEO, so it is important to arrange them properly. This can also affect page is rendered when custom stylesheets are provided.</p>
-<!-- raw HTML omitted -->
+<br/>
 <ol start="6">
 <li><strong>Removing a Field</strong></li>
 </ol>
@@ -172,7 +253,7 @@ For pages such as <code>index</code> or <code>404</code> page may require static
         </section>
     </article>
 </main>
- <footer class="w-full bg-blue-700">
+  <footer class="w-full min-h-[100px] bg-blue-700">
     <hr class="zig-zag-line"></hr>
     <div
         class="w-3/4 w-max-[1080px] max-sm:w-[96%] mx-auto px-8 max-sm:px-4 py-12 text-slate-50 border-x border-x-blue-600/70 grid grid-cols-3 max-sm:grid-cols-1 gap-12 justify-between items-start"
@@ -186,6 +267,7 @@ For pages such as <code>index</code> or <code>404</code> page may require static
         <section class="h-full px-4 flex flex-col gap-2 text-sm border-l border-l-blue-600/70 max-sm:border-l-0 text-slate-100/70">
             <h3 class="text-lg mb-4">Resources</h3>
             <p><a href="#pricing" class="hover:italic">Pricing</a></p>
+            <p><a href="/docs" class="hover:italic">Documentation</a></p>
             <p><a href="/privacy-policy.html" target="_blank" class="hover:italic">Privacy Policy</a></p>
             <p><a href="/terms-of-service.html" target="_blank" class="hover:italic">Terms of Service</a></p>
             <p><a href="/refund-policy.html" target="_blank" class="hover:italic">Refund Policy</a></p>

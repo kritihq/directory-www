@@ -4,9 +4,11 @@
     dir="ltr"
 >
     <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-        <meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
-<title>Docs | My New Hugo Site</title>
+        <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    Docs | Kriti/ Directory
+</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
@@ -46,119 +48,161 @@
     }
 </style>
 <link rel="stylesheet" href="/css/output.css" />
-
-
-      <script src="/js/main.js"></script>
+ 
 
 
     </head>
-    <body class="bg-zinc-200">
+    <body
+        class="min-h-[100vh] bg-zinc-200 grid grid-rows-[min-content_1fr_auto] auto-cols-fr"
+    >
         <header
-    class="w-3/4 w-max-[1080px] max-sm:w-[96%] mx-auto bg-zinc-200 sticky top-0 z-99"
+    class="w-full bg-zinc-200 sticky top-0 z-99 border-b border-b-zinc-400/40"
 >
-    <nav class="mx-auto px-12 py-4 flex justify-between items-center">
+    <nav
+        class="w-3/4 w-max-[1080px] max-sm:w-[96%] mx-auto px-12 py-4 max-sm:px-2 flex justify-between items-center border-x border-x-zinc-400/20"
+    >
         <p>
             <a href="/">
                 <span style="font-family: Lora">Kriti/ </span>Directory
             </a>
         </p>
-        <a
-            href="https://dashboard.kriti.directory/auth"
-            target="_blank"
-            class="min-w-[100px] bg-blue-600 border border-blue-700 px-4 py-1 rounded-md text-slate-50 hover:bg-blue-800 text-sm text-center"
+        <nav
+            class="flex gap-4 max-sm:gap-1 items-center text-sm text-slate-600 text-center"
         >
-            Login
-        </a>
+            <a
+                href="/docs"
+                class="min-w-[100px] px-4 py-1 rounded-md hover:bg-zinc-300 hover:text-slate-900"
+            >
+                Docs
+            </a>
+            <a
+                href="https://dashboard.kriti.directory/auth"
+                target="_blank"
+                class="min-w-[100px] bg-blue-600 border border-blue-700 px-4 py-1 rounded-md text-slate-50 hover:bg-blue-800 text-sm text-center"
+            >
+                Login
+            </a>
+        </nav>
     </nav>
 </header>
  
-  <h1>Docs</h1>
-  
-  
-    <h2><a href="/docs/data/">Data, Collections &amp; Records</a></h2>
-    <h3 id="data">Data</h3>
-<p>Or the Excel file which contains all the listings/records which will be served by the directory. File should be of type <code>.xlsx</code> only.
-All the major spreadsheet software allow exporting to Excel format which saves the file as <code>.xlsx</code> which can be then imported.</p>
-<p>It is possible to host multiple collections per directory. Consider the example of &ldquo;job listings&rdquo; directory. The straightforward collection
-would be collection of &ldquo;jobs&rdquo; but you can also have &ldquo;companies&rdquo;, &ldquo;positions&rdquo; or &ldquo;locations&rdquo;.</p>
-  
-    <h2><a href="/docs/go-live-and-update/">Deploying your directory</a></h2>
-    <h2 id="go-live">Go Live</h2>
-<p>Its as easy as clicking the &ldquo;Go Live&rdquo; button.</p>
-<h3 id="steps">Steps</h3>
-<ol>
-<li>Create <a href="/docs/new-directory">new directory</a>
-A new card will be visible on dashboard with label &ldquo;New Directory&rdquo;.</li>
-</ol>
-<p><img src="/assets/go-live-and-update/directory-card-1.png" alt="New Directory"></p>
-<ol start="2">
-<li><a href="/docs/studio">Edit the design</a> &amp; <a href="/docs/page-seo">pSEO</a> is configured for the pages
-The &ldquo;Go Live&rdquo; button on the card should be enabled now</li>
-</ol>
-<p><img src="/assets/go-live-and-update/directory-card-2.png" alt="Go Live"></p>
-<ol start="3">
-<li>
-<p>Click &ldquo;Go Live&rdquo; &amp; wait till server is provisined usually takes a minute or two</p>
-</li>
-<li>
-<p><a href="/docs/update-dns">Update DNS records</a> with your domain provider</p>
-  
-    <h2><a href="/docs/studio/studio/">Kriti Studio</a></h2>
-    <p>Kriti Studio is a web-only, no code, drag and drop builder which
-allow you to design your sites however you see fit. Its your brand after all.</p>
-<h2 id="prerequisites">Prerequisites</h2>
-<ol>
-<li>A directory is already created. <a href="/docs/new-directory">How to?</a></li>
-<li>All the data is ready in <code>.xlsx</code> file and imported. <a href="/docs/data">How to?</a></li>
-</ol>
-<h2 id="post-import--web-pages">Post import &amp; web pages</h2>
-<p>After importing data, some web pages are auto generated based on the data. You can view this pages on top left corner drop down menu.</p>
-  
-    <h2><a href="/docs/new-directory/">New Directory</a></h2>
-    <p>Starting a new directory? You need 3 things:</p>
-<ol>
-<li><strong>title</strong>: An internal only directory title to identify it amongst other directories on your dashboard.
-Title should be a single word, alphabets only (no numbers or special characters) and unique amongst other directories on your dashboard.</li>
-<li><strong>domain</strong>: An URL where you&rsquo;ll host the directory. Once the directory is published, DNS records will be shared
-which customers are expected to add them to thier domain provider so that the directory can be served on that domain/URL.</li>
-<li><strong>data</strong>: An excel (&quot;.xlsx&quot;) file which contains all the collections &amp; listings. There are certain structure which is expected from
-this excel file. This is explained in the <a href="/docs/data">next section</a>.</li>
-</ol>
-<blockquote>
-<p>As long as Kriti/Directory is in BETA, only 1 directory per user restriction is imposed.
-Please contact <a href="mailto:vinay.gaykar+kriti-support@proton.me">support</a> for help.</p>
-  
-    <h2><a href="/docs/page-seo/">Page Metadata &amp; SEO</a></h2>
-    <p>This documentation explains how to add page meta data in your application using the built-in &ldquo;Page Meta &amp; SEO&rdquo; panel. The panel provides an easy way to manage meta data fields to improve your page’s SEO. Follow the instructions below to add new meta data fields and input the necessary information.</p>
-<!-- raw HTML omitted -->
-<h2 id="adding-metadata">Adding Metadata</h2>
-<ol>
-<li><strong>Accessing the &ldquo;Page Meta &amp; SEO&rdquo; Panel</strong></li>
-</ol>
-<p>Locate and click the accordian &ldquo;Page Meta &amp; SEO&rdquo; on top left corner below page selector. Clicking on it will expand the section to reveal the meta data form.</p>
-  
-    <h2><a href="/docs/update-dns/">Setting Up Your DNS Records</a></h2>
-    <p>After clicking &ldquo;Go Live&rdquo; on your dashboard, you&rsquo;ll need to point your domain to your new server. Here&rsquo;s how to get your IP address and update your DNS records.</p>
-<h2 id="getting-your-ip-address">Getting Your IP Address</h2>
-<ol>
-<li>Click the <strong>&ldquo;View DNS&rdquo;</strong> button on your directory card</li>
-<li>Copy the IP address shown</li>
-<li>Keep this handy - you&rsquo;ll need it for the next steps</li>
-</ol>
-<h2 id="updating-dns-records-by-provider">Updating DNS Records by Provider</h2>
-<h3 id="godaddy">GoDaddy</h3>
-<ol>
-<li>Log into your GoDaddy account</li>
-<li>Go to <strong>My Products</strong> &gt; <strong>DNS</strong></li>
-<li>Find your domain and click <strong>Manage</strong></li>
-<li>Look for the <strong>A Record</strong> with &ldquo;@&rdquo; or your domain name</li>
-<li>Click the pencil icon to edit</li>
-<li>Replace the old IP with your new IP address</li>
-<li>Click <strong>Save</strong></li>
-</ol>
-<p>Changes take 1-24 hours to work everywhere.</p>
-  
- <footer class="w-full bg-blue-700">
+<main
+    class="w-3/4 w-max-[1080px] max-sm:w-[96%] mx-auto max-sm:px-2 grid grid-cols-1fr auto-rows-min border-x border-x-zinc-400/40"
+>
+    <nav
+        aria-label="breadcrumbs"
+        class="px-2 py-2 border-l border-zinc-400/20 max-sm:border-l-0"
+    >
+        <ul id="breadcrumbs">
+            <li class="text-slate-500 breadcrumb-curr">Docs</li>
+        </ul>
+    </nav>
+    <article class="bg-zinc-100 rounded-md border-t border-t-zinc-400/20">
+        <h1 class="p-8 max-sm:p-2">Docs</h1>
+        <nav
+            aria-label="quick links"
+            class="w-3/4 max-sm:w-full mx-auto p-8 max-sm:p-2"
+        >
+            <p class="mb-8 text-sm text-blue-600 uppercase">Guides</p>
+            <menu
+                class="list-none grid grid-cols-3 max-sm:grid-cols-1 gap-8 auto-rows-fr rounded-md"
+            >
+                
+                <li
+                    class="min-h-[150px] p-2 hover:bg-zinc-300/20 hover:scale-105 border border-zinc-400/20 rounded-md animate-[slideUp_0.5s_ease-out_1_both]"
+                >
+                    <a
+                        href="http://localhost:1313/docs/data/"
+                        class="h-full w-full inline-block"
+                    >
+                        <h3 class="text-lg text-slate-600 decoration-none">
+                            Data, Collections &amp; Records
+                        </h3>
+                        
+                    </a>
+                </li>
+                
+                <li
+                    class="min-h-[150px] p-2 hover:bg-zinc-300/20 hover:scale-105 border border-zinc-400/20 rounded-md animate-[slideUp_0.5s_ease-out_1_both]"
+                >
+                    <a
+                        href="http://localhost:1313/docs/go-live-and-update/"
+                        class="h-full w-full inline-block"
+                    >
+                        <h3 class="text-lg text-slate-600 decoration-none">
+                            Deploying Your Directory
+                        </h3>
+                        
+                    </a>
+                </li>
+                
+                <li
+                    class="min-h-[150px] p-2 hover:bg-zinc-300/20 hover:scale-105 border border-zinc-400/20 rounded-md animate-[slideUp_0.5s_ease-out_1_both]"
+                >
+                    <a
+                        href="http://localhost:1313/docs/studio/studio/"
+                        class="h-full w-full inline-block"
+                    >
+                        <h3 class="text-lg text-slate-600 decoration-none">
+                            Kriti Studio
+                        </h3>
+                        
+                    </a>
+                </li>
+                
+                <li
+                    class="min-h-[150px] p-2 hover:bg-zinc-300/20 hover:scale-105 border border-zinc-400/20 rounded-md animate-[slideUp_0.5s_ease-out_1_both]"
+                >
+                    <a
+                        href="http://localhost:1313/docs/new-directory/"
+                        class="h-full w-full inline-block"
+                    >
+                        <h3 class="text-lg text-slate-600 decoration-none">
+                            New Directory
+                        </h3>
+                        
+                    </a>
+                </li>
+                
+                <li
+                    class="min-h-[150px] p-2 hover:bg-zinc-300/20 hover:scale-105 border border-zinc-400/20 rounded-md animate-[slideUp_0.5s_ease-out_1_both]"
+                >
+                    <a
+                        href="http://localhost:1313/docs/page-seo/"
+                        class="h-full w-full inline-block"
+                    >
+                        <h3 class="text-lg text-slate-600 decoration-none">
+                            Page Metadata &amp; Seo
+                        </h3>
+                        
+                    </a>
+                </li>
+                
+                <li
+                    class="min-h-[150px] p-2 hover:bg-zinc-300/20 hover:scale-105 border border-zinc-400/20 rounded-md animate-[slideUp_0.5s_ease-out_1_both]"
+                >
+                    <a
+                        href="http://localhost:1313/docs/update-dns/"
+                        class="h-full w-full inline-block"
+                    >
+                        <h3 class="text-lg text-slate-600 decoration-none">
+                            Setting Up Your DNS Records
+                        </h3>
+                        
+                    </a>
+                </li>
+                
+            </menu>
+        </nav>
+        <section
+            id="content"
+            class="w-max-[75%] max-sm:px-4 p-8 borer-x border-zinc-400/40 rounded-b-md text-balanced col-start-1 row-start-2"
+        >
+            
+        </section>
+    </article>
+</main>
+  <footer class="w-full min-h-[100px] bg-blue-700">
     <hr class="zig-zag-line"></hr>
     <div
         class="w-3/4 w-max-[1080px] max-sm:w-[96%] mx-auto px-8 max-sm:px-4 py-12 text-slate-50 border-x border-x-blue-600/70 grid grid-cols-3 max-sm:grid-cols-1 gap-12 justify-between items-start"
@@ -172,6 +216,7 @@ Please contact <a href="mailto:vinay.gaykar+kriti-support@proton.me">support</a>
         <section class="h-full px-4 flex flex-col gap-2 text-sm border-l border-l-blue-600/70 max-sm:border-l-0 text-slate-100/70">
             <h3 class="text-lg mb-4">Resources</h3>
             <p><a href="#pricing" class="hover:italic">Pricing</a></p>
+            <p><a href="/docs" class="hover:italic">Documentation</a></p>
             <p><a href="/privacy-policy.html" target="_blank" class="hover:italic">Privacy Policy</a></p>
             <p><a href="/terms-of-service.html" target="_blank" class="hover:italic">Terms of Service</a></p>
             <p><a href="/refund-policy.html" target="_blank" class="hover:italic">Refund Policy</a></p>

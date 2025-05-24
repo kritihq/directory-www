@@ -8,7 +8,6 @@ h1 {
 
 h2 {
     @apply text-2xl text-slate-900;
-    @apply border-b border-b-stone-700/40;
 }
 
 h3 {
@@ -18,6 +17,7 @@ h3 {
 ul {
     @apply list-disc list-inside;
 }
+
 ol {
     @apply list-decimal list-inside;
 }
@@ -25,18 +25,30 @@ ol {
 code,
 kbd,
 pre {
-    @apply p-[2px] bg-blue-100;
+    @apply p-[2px] bg-blue-100/40;
     @apply text-sm font-mono;
-    @apply border border-blue-500 rounded-sm;
+    @apply border border-blue-500/40 rounded-sm;
 }
 
 #content {
+    @apply leading-7;
+
     h2 {
         @apply mt-6 mb-4 pb-2;
+        @apply border-b border-b-stone-400/20;
     }
 
     h3 {
         @apply my-4;
+    }
+
+    a {
+        @apply text-blue-800;
+        @apply underline underline-offset-4 decoration-wavy;
+
+        &:hover {
+            @apply italic;
+        }
     }
 
     li {
@@ -49,22 +61,52 @@ pre {
         list-style: decimal-leading-zero inside;
 
         li {
-            @apply text-sm text-slate-600 m-4;
+            @apply text-sm text-slate-500 m-4;
+            animation: slideUp 0.3s ease-out 1 both;
+
+            &:hover {
+                @apply text-slate-800;
+            }
+        }
+
+        a {
+            text-decoration: none;
         }
     }
 }
 
 #breadcrumbs {
     @apply text-xs text-blue-500 uppercase;
-    @apply my-2 flex gap-2;
+    @apply my-2 flex gap-1;
     @apply list-["/__"] list-inside;
 
     li {
-        @apply my-0;
+        @apply my-0 p-1 rounded-sm;
+        @apply hover:bg-blue-300/20;
+    }
+
+    li.breadcrumb-curr {
+        @apply hover:bg-transparent;
     }
 
     li::marker {
         @apply px-2;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+#section-links {
+    ul {
+        @apply text-sm text-slate-700;
+        @apply list-none;
+
+        li {
+            @apply my-1;
+            @apply rounded-md;
+        }
     }
 }
 
@@ -78,5 +120,14 @@ footer {
     p,
     small {
         @apply text-slate-300;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translate3d(0, 40px, 0);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
     }
 }

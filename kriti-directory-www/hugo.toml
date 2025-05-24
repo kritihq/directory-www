@@ -1,4 +1,7 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://kriti.directory/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme = 'kriti-directory'
+title = 'Kriti/ Directory'
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

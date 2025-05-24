@@ -2,7 +2,7 @@
 title: Data, Collections & Records
 ---
 
-### Data
+## Data
 
 Or the Excel file which contains all the listings/records which will be served by the directory. File should be of type `.xlsx` only.
 All the major spreadsheet software allow exporting to Excel format which saves the file as `.xlsx` which can be then imported.
@@ -10,7 +10,7 @@ All the major spreadsheet software allow exporting to Excel format which saves t
 It is possible to host multiple collections per directory. Consider the example of "job listings" directory. The straightforward collection
 would be collection of "jobs" but you can also have "companies", "positions" or "locations".
 
-### Collections
+## Collections
 
 Every worksheet inside the Excel file corresponds to a collection. Every collection is a collection of records/listings (rows).
 E.g. if the directory is about "Job Listings" then the collection would "jobs".
@@ -54,7 +54,7 @@ all the registered collections, except "positions" which althought present in th
 
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSzv5SvBT0e8Bo--wrTJ8hMVGz-UNwh_4HHCcJ2a6-Q5EYPUzEexIQbVMZddhc9ld8Ci0D9FqWKKn3-/pubhtml?widget=true&amp;headers=false" width="100%" height="100%" style="margin: 24px 0;"></iframe>
 
-### Records
+## Records
 
 Every single row in any worksheet is a record (listing). Each one of these row will lead to a new web page. Every row under a worksheet must have unique ID and title cell values. If slug is provided then it must also be unique.
 
