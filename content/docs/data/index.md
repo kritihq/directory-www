@@ -52,7 +52,7 @@ is added under `collection` column in `_collections` worksheet, effectively regi
 This embeded google sheet shows ideal Excel file. Notice the `_collection` worksheet at bottom which contains
 all the registered collections, except "positions" which althought present in the excel won't be served by the directory.
 
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSzv5SvBT0e8Bo--wrTJ8hMVGz-UNwh_4HHCcJ2a6-Q5EYPUzEexIQbVMZddhc9ld8Ci0D9FqWKKn3-/pubhtml?widget=true&amp;headers=false" width="100%" height="100%" style="margin: 24px 0;"></iframe>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSzv5SvBT0e8Bo--wrTJ8hMVGz-UNwh_4HHCcJ2a6-Q5EYPUzEexIQbVMZddhc9ld8Ci0D9FqWKKn3-/pubhtml?widget=true&amp;headers=false" width="100%" height="400px" style="margin: 24px 0;"></iframe>
 
 ## Records
 
