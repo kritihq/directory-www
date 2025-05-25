@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docs on Kriti/ Directory</title>
+    <link>http://localhost:1313/docs/</link>
+    <description>Recent content in Docs on Kriti/ Directory</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/docs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data, Collections &amp; Records</title>
+      <link>http://localhost:1313/docs/data/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/data/</guid>
+      <description>&lt;h2 id=&#34;data&#34;&gt;Data&lt;/h2&gt;&#xA;&lt;p&gt;Or the Excel file which contains all the listings/records which will be served by the directory. File should be of type &lt;code&gt;.xlsx&lt;/code&gt; only.&#xA;All the major spreadsheet software allow exporting to Excel format which saves the file as &lt;code&gt;.xlsx&lt;/code&gt; which can be then imported.&lt;/p&gt;&#xA;&lt;p&gt;It is possible to host multiple collections per directory. Consider the example of &amp;ldquo;job listings&amp;rdquo; directory. The straightforward collection&#xA;would be collection of &amp;ldquo;jobs&amp;rdquo; but you can also have &amp;ldquo;companies&amp;rdquo;, &amp;ldquo;positions&amp;rdquo; or &amp;ldquo;locations&amp;rdquo;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Deploying your directory</title>
+      <link>http://localhost:1313/docs/go-live-and-update/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/go-live-and-update/</guid>
+      <description>&lt;h2 id=&#34;go-live&#34;&gt;Go Live&lt;/h2&gt;&#xA;&lt;p&gt;Its as easy as clicking the &amp;ldquo;Go Live&amp;rdquo; button.&lt;/p&gt;&#xA;&lt;h3 id=&#34;steps&#34;&gt;Steps&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Create &lt;a href=&#34;http://localhost:1313/docs/new-directory&#34;&gt;new directory&lt;/a&gt;&#xA;A new card will be visible on dashboard with label &amp;ldquo;New Directory&amp;rdquo;.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/assets/go-live-and-update/directory-card-1.png&#34; alt=&#34;New Directory&#34;&gt;&lt;/p&gt;&#xA;&lt;ol start=&#34;2&#34;&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://localhost:1313/docs/studio&#34;&gt;Edit the design&lt;/a&gt; &amp;amp; &lt;a href=&#34;http://localhost:1313/docs/page-seo&#34;&gt;pSEO&lt;/a&gt; is configured for the pages&#xA;The &amp;ldquo;Go Live&amp;rdquo; button on the card should be enabled now&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/assets/go-live-and-update/directory-card-2.png&#34; alt=&#34;Go Live&#34;&gt;&lt;/p&gt;&#xA;&lt;ol start=&#34;3&#34;&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Click &amp;ldquo;Go Live&amp;rdquo; &amp;amp; wait till server is provisined usually takes a minute or two&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/docs/update-dns&#34;&gt;Update DNS records&lt;/a&gt; with your domain provider&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Kriti Studio</title>
+      <link>http://localhost:1313/docs/studio/studio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/studio/studio/</guid>
+      <description>&lt;p&gt;Kriti Studio is a web-only, no code, drag and drop builder which&#xA;allow you to design your sites however you see fit. Its your brand after all.&lt;/p&gt;&#xA;&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;A directory is already created. &lt;a href=&#34;http://localhost:1313/docs/new-directory&#34;&gt;How to?&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;All the data is ready in &lt;code&gt;.xlsx&lt;/code&gt; file and imported. &lt;a href=&#34;http://localhost:1313/docs/data&#34;&gt;How to?&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;post-import--web-pages&#34;&gt;Post import &amp;amp; web pages&lt;/h2&gt;&#xA;&lt;p&gt;After importing data, some web pages are auto generated based on the data. You can view this pages on top left corner drop down menu.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New Directory</title>
+      <link>http://localhost:1313/docs/new-directory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/new-directory/</guid>
+      <description>&lt;p&gt;Starting a new directory? You need 3 things:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;title&lt;/strong&gt;: An internal only directory title to identify it amongst other directories on your dashboard.&#xA;Title should be a single word, alphabets only (no numbers or special characters) and unique amongst other directories on your dashboard.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;domain&lt;/strong&gt;: An URL where you&amp;rsquo;ll host the directory. Once the directory is published, DNS records will be shared&#xA;which customers are expected to add them to thier domain provider so that the directory can be served on that domain/URL.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;data&lt;/strong&gt;: An excel (&amp;quot;.xlsx&amp;quot;) file which contains all the collections &amp;amp; listings. There are certain structure which is expected from&#xA;this excel file. This is explained in the &lt;a href=&#34;http://localhost:1313/docs/data&#34;&gt;next section&lt;/a&gt;.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;As long as Kriti/Directory is in BETA, only 1 directory per user restriction is imposed.&#xA;Please contact &lt;a href=&#34;mailto:vinay.gaykar+kriti-support@proton.me&#34;&gt;support&lt;/a&gt; for help.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Page Metadata &amp; SEO</title>
+      <link>http://localhost:1313/docs/page-seo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/page-seo/</guid>
+      <description>&lt;p&gt;This documentation explains how to add page meta data in your application using the built-in &amp;ldquo;Page Meta &amp;amp; SEO&amp;rdquo; panel. The panel provides an easy way to manage meta data fields to improve your page’s SEO. Follow the instructions below to add new meta data fields and input the necessary information.&lt;/p&gt;&#xA;&lt;video controls width=&#34;100%&#34;&gt;&#xA;  &lt;source src=&#34;http://localhost:1313/assets/docs/page-seo/seo-demo.webm&#34; type=&#34;video/webm&#34; /&gt;&#xA;&lt;/video&gt;&#xA;&lt;h2 id=&#34;adding-metadata&#34;&gt;Adding Metadata&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Accessing the &amp;ldquo;Page Meta &amp;amp; SEO&amp;rdquo; Panel&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Locate and click the accordian &amp;ldquo;Page Meta &amp;amp; SEO&amp;rdquo; on top left corner below page selector. Clicking on it will expand the section to reveal the meta data form.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Setting Up Your DNS Records</title>
+      <link>http://localhost:1313/docs/update-dns/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/docs/update-dns/</guid>
+      <description>&lt;p&gt;After clicking &amp;ldquo;Go Live&amp;rdquo; on your dashboard, you&amp;rsquo;ll need to point your domain to your new server. Here&amp;rsquo;s how to get your IP address and update your DNS records.&lt;/p&gt;&#xA;&lt;h2 id=&#34;getting-your-ip-address&#34;&gt;Getting Your IP Address&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Click the &lt;strong&gt;&amp;ldquo;View DNS&amp;rdquo;&lt;/strong&gt; button on your directory card&lt;/li&gt;&#xA;&lt;li&gt;Copy the IP address shown&lt;/li&gt;&#xA;&lt;li&gt;Keep this handy - you&amp;rsquo;ll need it for the next steps&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;updating-dns-records-by-provider&#34;&gt;Updating DNS Records by Provider&lt;/h2&gt;&#xA;&lt;h3 id=&#34;godaddy&#34;&gt;GoDaddy&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Log into your GoDaddy account&lt;/li&gt;&#xA;&lt;li&gt;Go to &lt;strong&gt;My Products&lt;/strong&gt; &amp;gt; &lt;strong&gt;DNS&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;Find your domain and click &lt;strong&gt;Manage&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;Look for the &lt;strong&gt;A Record&lt;/strong&gt; with &amp;ldquo;@&amp;rdquo; or your domain name&lt;/li&gt;&#xA;&lt;li&gt;Click the pencil icon to edit&lt;/li&gt;&#xA;&lt;li&gt;Replace the old IP with your new IP address&lt;/li&gt;&#xA;&lt;li&gt;Click &lt;strong&gt;Save&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Changes take 1-24 hours to work everywhere.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
