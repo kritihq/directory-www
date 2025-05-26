@@ -193,18 +193,20 @@
                 &larr; Start your hosting journey right now
             </p>
         </div>
-        <div
-            class="mx-auto w-[90%] max-lg:w-full min-h-[40vh] max-lg:h-fit flex max-lg:flex-col-reverse items-center gap-8"
+        <menu
+            class="px-2 max-lg:px-4 py-2 w-[90%] max-lg:w-full max-h-[500px] max-lg:max-h-[100vh] mx-auto max-lg:overflow-x-scroll flex-1/2 shrink-0 grow-0 grid grid-cols-2 grid-rows-4 max-lg:grid-cols-[repeat(4,_70vw)] max-lg:grid-rows-[max-content_1fr] gap-4"
         >
-            <div
-                id="feature_buttons"
-                class="px-2 max-lg:px-4 py-2 max-lg:w-full max-lg:overflow-x-scroll flex-1/2 shrink-0 grow-0 grid grid-rows-4 max-lg:grid-cols-[repeat(4,_70vw)] max-lg:grid-rows-none gap-4"
+            <li
+                id="f_item_1"
+                class="contents z-1 [&[data-selected]>img]:z-[4] [&[data-selected]>button]:shadow-blue-600/10 [&[data-selected]>button]:shadow-[6px_6px_0px_0px] [&[data-selected]>button]:-translate-2"
             >
+                <img
+                    class="w-full h-full border-6 border-blue-600/20 rounded-md col-start-2 row-start-1 row-end-5 max-lg:col-start-1 max-lg:row-start-1 max-lg:row-end-2"
+                    src="/assets/spreadsheets.webp"
+                />
                 <button
-                    class="text-start px-4 py-2 max-lg:flex-[0_0_75%] border border-blue-400/40 rounded-sm data-[selected]:shadow-blue-600/10 data-[selected]:shadow-[6px_6px_0px_0px] data-[selected]:-translate-2 hover:bg-zinc-200/10"
-                    onclick="onFeatureClick(event)"
-                    data-selected
-                    data-source="/assets/spreadsheets.webp"
+                    class="text-start w-full h-full px-4 py-2 col-start-1 row-start-1 border border-blue-400/40 rounded-sm hover:bg-zinc-200/10 max-lg:col-start-1 max-lg:row-start-2"
+                    onclick="showoffFeature(1)"
                 >
                     <h3 class="text-xl mb-2 pointer-events-none">
                         Save time &amp; money
@@ -216,10 +218,18 @@
                         spreadsheet editor while we handle the servers.
                     </p>
                 </button>
+            </li>
+            <li
+                id="f_item_2"
+                class="contents z-1 [&[data-selected]>img]:z-[4] [&[data-selected]>button]:shadow-blue-600/10 [&[data-selected]>button]:shadow-[6px_6px_0px_0px] [&[data-selected]>button]:-translate-2"
+            >
+                <img
+                    class="w-full h-full border-6 border-blue-600/20 rounded-md col-start-2 row-start-1 row-end-5 max-lg:col-start-2 max-lg:row-start-1 max-lg:row-end-2"
+                    src="/assets/performance.png"
+                />
                 <button
-                    class="text-start px-4 py-2 max-lg:flex-[0_0_75%] border border-blue-400/40 rounded-sm data-[selected]:shadow-blue-600/10 data-[selected]:shadow-[6px_6px_0px_0px] data-[selected]:-translate-2 hover:bg-zinc-200/10"
-                    onclick="onFeatureClick(event)"
-                    data-source="/assets/performance.png"
+                    class="text-start w-full h-full px-4 py-2 col-start-1 row-start-2 border border-blue-400/40 rounded-sm hover:bg-zinc-200/10 max-lg:col-start-2 max-lg:row-start-2"
+                    onclick="showoffFeature(2)"
                 >
                     <h3 class="text-xl mb-2 pointer-events-none">
                         I am spe<i>eeeeee</i>ed
@@ -230,10 +240,18 @@
                         Every request optimised to be served in subseconds
                     </p>
                 </button>
+            </li>
+            <li
+                id="f_item_3"
+                class="contents z-1 [&[data-selected]>img]:z-[4] [&[data-selected]>button]:shadow-blue-600/10 [&[data-selected]>button]:shadow-[6px_6px_0px_0px] [&[data-selected]>button]:-translate-2"
+            >
+                <img
+                    class="w-full h-full border-6 border-blue-600/20 rounded-md col-start-2 row-start-1 row-end-5 max-lg:col-start-3 max-lg:row-start-1 max-lg:row-end-2"
+                    src="/assets/elements2.png"
+                />
                 <button
-                    class="text-start px-4 py-2 max-lg:flex-[0_0_75%] border border-blue-400/40 rounded-sm data-[selected]:shadow-blue-600/10 data-[selected]:shadow-[6px_6px_0px_0px] data-[selected]:-translate-2 hover:bg-zinc-200/10"
-                    onclick="onFeatureClick(event)"
-                    data-source="/assets/elements2.png"
+                    class="text-start w-full h-full px-4 py-2 col-start-1 row-start-3 border border-blue-400/40 rounded-sm hover:bg-zinc-200/10 max-lg:col-start-3 max-lg:row-start-2"
+                    onclick="showoffFeature(3)"
                 >
                     <h3 class="text-xl mb-2 pointer-events-none">
                         Drag, drop & tweak endlessly
@@ -245,10 +263,18 @@
                         page as your brand sees fit.
                     </p>
                 </button>
+            </li>
+            <li
+                id="f_item_4"
+                class="contents z-1 [&[data-selected]>img]:z-[4] [&[data-selected]>button]:shadow-blue-600/10 [&[data-selected]>button]:shadow-[6px_6px_0px_0px] [&[data-selected]>button]:-translate-2"
+            >
+                <img
+                    class="w-full h-full border-6 border-blue-600/20 rounded-md col-start-2 row-start-1 row-end-5 max-lg:col-start-4 max-lg:row-start-1 max-lg:row-end-2"
+                    src="/assets/meta.png"
+                />
                 <button
-                    class="text-start px-4 py-2 max-lg:flex-[0_0_75%] border border-blue-400/40 rounded-sm data-[selected]:shadow-blue-600/10 data-[selected]:shadow-[6px_6px_0px_0px] data-[selected]:-translate-2 hover:bg-zinc-200/10"
-                    onclick="onFeatureClick(event)"
-                    data-source="/assets/meta.png"
+                    class="text-start w-full h-full px-4 py-2 col-start-1 row-start-4 border border-blue-400/40 rounded-sm hover:bg-zinc-200/10 max-lg:col-start-4 max-lg:row-start-2"
+                    onclick="showoffFeature(4)"
                 >
                     <h3 class="text-xl mb-2 pointer-events-none">
                         Be on page 1
@@ -260,22 +286,18 @@
                         images or custom tags, dynamic and unique for every page
                     </p>
                 </button>
-            </div>
-            <img
-                id="feature_thumbnail"
-                class="w-full h-[400px] border-6 border-blue-600/20 rounded-md"
-                src="/assets/spreadsheets.webp"
-            />
+            </li>
             <script>
-                function onFeatureClick(event) {
-                    for (const c of feature_buttons.children) {
-                        c.removeAttribute("data-selected");
+                function showoffFeature(id) {
+                    const feats = [f_item_1, f_item_2, f_item_3, f_item_4];
+                    for (const f of feats) {
+                        f.removeAttribute("data-selected");
                     }
-                    event.target.setAttribute("data-selected", "");
-                    feature_thumbnail.src = event.target.dataset.source;
+
+                    feats[id - 1].setAttribute("data-selected", "");
                 }
             </script>
-        </div>
+        </menu>
         <h3 class="w-[90%] mx-auto mt-12 mb-8 text-sm italic">
             The list goes on ...
         </h3>
