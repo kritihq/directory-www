@@ -1475,6 +1475,68 @@
       }
     }
   }
+  .max-lg\:\[\&\[data-selected\]\>button\]\:translate-0 {
+    @media (width < 64rem) {
+      &[data-selected]>button {
+        --tw-translate-x: calc(var(--spacing) * 0);
+        --tw-translate-y: calc(var(--spacing) * 0);
+        translate: var(--tw-translate-x) var(--tw-translate-y);
+      }
+    }
+  }
+  .max-lg\:\[\&\[data-selected\]\>button\]\:shadow-\[6px_6px_0px_0px\] {
+    @media (width < 64rem) {
+      &[data-selected]>button {
+        --tw-shadow: 6px 6px 0px 0px var(--tw-shadow-color, currentcolor);
+        box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+      }
+    }
+  }
+  .max-lg\:\[\&\[data-selected\]\>button\]\:shadow-none {
+    @media (width < 64rem) {
+      &[data-selected]>button {
+        --tw-shadow: 0 0 #0000;
+        box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+      }
+    }
+  }
+  .max-lg\:\[\&\[data-selected\]\>button\]\:shadow-blue-600\/10 {
+    @media (width < 64rem) {
+      &[data-selected]>button {
+        --tw-shadow-color: color-mix(in srgb, oklch(54.6% 0.245 262.881) 10%, transparent);
+        @supports (color: color-mix(in lab, red, red)) {
+          --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-blue-600) 10%, transparent) var(--tw-shadow-alpha), transparent);
+        }
+      }
+    }
+  }
+  .lg\:\[\&\[data-selected\]\>button\]\:-translate-2 {
+    @media (width >= 64rem) {
+      &[data-selected]>button {
+        --tw-translate-x: calc(var(--spacing) * -2);
+        --tw-translate-y: calc(var(--spacing) * -2);
+        translate: var(--tw-translate-x) var(--tw-translate-y);
+      }
+    }
+  }
+  .lg\:\[\&\[data-selected\]\>button\]\:shadow-\[6px_6px_0px_0px\] {
+    @media (width >= 64rem) {
+      &[data-selected]>button {
+        --tw-shadow: 6px 6px 0px 0px var(--tw-shadow-color, currentcolor);
+        box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+      }
+    }
+  }
+  .lg\:\[\&\[data-selected\]\>button\]\:shadow-blue-600\/10 {
+    @media (width >= 64rem) {
+      &[data-selected]>button {
+        --tw-shadow-color: color-mix(in srgb, oklch(54.6% 0.245 262.881) 10%, transparent);
+        @supports (color: color-mix(in lab, red, red)) {
+          --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-blue-600) 10%, transparent) var(--tw-shadow-alpha), transparent);
+        }
+      }
+    }
+  }
   .\[\&\[data-selected\]\>img\]\:z-\[4\] {
     &[data-selected]>img {
       z-index: 4;
