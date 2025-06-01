@@ -16,10 +16,18 @@ h3 {
 
 ul {
     @apply list-disc list-inside;
+
+    & > li > p {
+        @apply inline;
+    }
 }
 
 ol {
     @apply list-decimal list-inside;
+
+    & > li > p {
+        @apply inline;
+    }
 }
 
 code,
