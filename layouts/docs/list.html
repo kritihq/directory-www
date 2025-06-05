@@ -2,10 +2,7 @@
 <main
     class="w-3/4 w-max-[1080px] max-lg:w-[96%] mx-auto grid grid-cols-1fr auto-rows-min border-x border-x-zinc-400/40"
 >
-    <nav
-        aria-label="breadcrumbs"
-        class="px-2 py-2 border-l border-zinc-400/20 max-lg:border-l-0"
-    >
+    <nav aria-label="breadcrumbs" class="px-2 py-2">
         <ul id="breadcrumbs">
             {{- range $k, $v := .Ancestors.Reverse }} {{- if (gt $k 0) }}
             <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
